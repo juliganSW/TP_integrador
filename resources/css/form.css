@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+ body h1{
+    color: white;
+}
+form{
+    background: #636363;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a2ab58, #636363);
+    width:400px;
+    padding: 20px;
+    border:1px solid #ffffff;
+    border-radius: 15px;
+}
+label {
+    font-weight: bold;
+  }
+    

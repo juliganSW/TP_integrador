@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+/* Estilos para la barra de navegacion */
+header {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  margin-top: 1rem;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 6.5rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1.25rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  font-size: 1.2rem;
+  color: #ffffff;
+  box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
+}
+
+nav ul {
+  display: flex; /*se ubica en línea la lista*/
+  margin: 0rem;
+  padding: 6.25rem;
+}
+nav ul li {
+  list-style: none; /*se eliminan las viñetas de los elementos de la lista*/
+  margin: 0 1.563rem;
+}
+
+nav ul li a {
+  text-decoration: none; /*se elimina el subrayado a los elementos*/
+  color: #ffffff;
+}
+nav ul li a:hover {
+  color: #000000;
+  background-color: #ffd90092;
+  
+  border-radius: 5px;
+}
+
+.logo {
+  margin-top: 1.5rem;
+  margin-left: -8rem;
+  width: 15rem;
+}
+
+/* background principal*/
+.banner {
+  position: relative;
+  min-width: 90vw;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/vista-lujoso-espacio-interior-hotel.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  font-family: "Caveat", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.titulo {
+  color: white;
+  font-size: 5rem;
+  position: relative;
+}
+h4.titulo {
+  margin-top: 2rem;
+  color: white;
+  font-size: 3rem;
+}
+
+.fade-in-text {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*titulo principal*/
+.presentacion h1 {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #ffd90092;
+  text-align: center;
+}
+/*Contenedor con la presentacion*/
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr; /* Una fila */
+  width: 90%; /* Ancho del contenedor del grid */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.item2 {
+  margin-top: 1rem;
+  background: #636363;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #000000;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+
+/* Seccion donde se muestran imagenes de habitaciones */
+Section.rooms h1 {
+  color: #ffd90092;
+  font-size: 2rem;
+  text-align: center;
+}
+.grid-rooms {
+  display: grid;
+  grid-template: 2.25rem 16rem / 0.6fr 0.6fr 0.6fr;
+  grid-template-areas:
+    "arriba arriba arriba"
+    "izquierda centro derecha";
+  gap: 1.563rem;
+  width: 90%; /* Ancho del contenedor del grid */
+  margin: 3rem auto;
+  color: #ffd90092;
+  
+}
+.arriba {
+  grid-area: arriba;
+  text-align: center;
+}
+.grid-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item img {
+  width: 20rem;
+  align-items: center;
+  border: 0.063rem solid white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px 0 #ffd90092;
+  cursor: pointer;
+  transition: 1s;
+}
+.grid-item img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 0 0 10px 0 white;
+}
+
+.izquierda {
+  grid-area: izquierda;
+  text-align: center;
+  border-radius: 0.625rem;
+  font-size: 1.5rem;
+}
+
+.centro {
+  grid-area: centro;
+  text-align: center;
+  border-radius: 0.625rem;
+  font-size: 1.5rem;
+}
+
+.derecha {
+  grid-area: derecha;
+  text-align: center;
+  border-radius: 0.625rem;
+  font-size: 1.5rem;
+}
+
+/* Seccion de servicios */
+Section.servicios h1 {
+  color: #ffd90092;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid-services {
+  display: grid;
+  grid-template-rows: repeat(2, 0.5fr); /* Dos filas automáticas */
+  grid-template-columns: repeat(2,1fr); /* Dos columnas de igual ancho*/
+  grid-gap: 20px; /* Espacio entre elementos */
+  width: 90%; /* Ancho del contenedor del grid */
+  margin: 3rem auto; /* Centrar el contenedor */
+}
+
+
+.grid-item1 article {
+  background: #636363;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+.grid-item2 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.grid-item2 ul{
+  margin-top:-1rem;
+}
+.grid-item2 ul li {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.grid-item2 ul li i {
+  color: #ffd90092;
+}
+
+/* seccion restaurante*/
+.grid-rest {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  width: 90%;
+  gap: 20px; /* Espacio entre las columnas */
+  padding: 20px;
+  margin: 3rem auto; /* Centrar el contenedor */
+}
+
+Section.restaurant h1 {
+  color: #ffd90092;
+  font-size: 2rem;
+  text-align: center;
+}
+.grid-rest img {
+  width: 100%;
+  border: 0.063rem solid white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+.grid-column2 article {
+  margin-top: 1rem;
+  background: #636363;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+
+/* Seccion eventos */
+.grid-event{
+  display:grid;
+  grid-template-columns: 1fr 1fr ;
+  width:90%;
+  gap: 20px; /* Espacio entre las columnas */
+  padding: 20px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+Section.eventos h1 {
+  color: #ffd90092;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid-event img {
+  width: 100%;
+  border: 0.063rem solid white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+
+.event1 article{
+  margin-top: 1rem;
+  background: #636363;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px 0 #ffd90092;
+}
+
+/*contenedor del footer*/
+.foot-container{
+  background: #403B4A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width:100%;
+  display: grid;
+  grid-template: 4.25rem 15rem / 0.8fr 0.8fr 0.8fr;
+  grid-template-areas:
+  "up up up"
+  "left center right";
+  justify-content: start;
+  row-gap: 2.5rem;
+  }
+
+  footer{
+    background-color: #a1ab5891;
+  }
+
+.up{
+  grid-area:up;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-family: "Caveat", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+
+.left{
+  grid-area:left;
+  margin-left: 1rem;
+  
+}
+
+.left ul li{
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.right{
+  grid-area: right;
+}
+  
+.footer-logo{
+  width: 10rem; 
+  margin-top: 2rem;
+  margin-left:5rem;
+}
+/*íconos de las redes sociales en el footer*/
+.fa-brands {
+  margin-top: 1rem;
+  padding: 0.313rem;
+  color:white;
+}
+
+.fa-brands:hover {
+  color:#fbff00c0;
+}
+
+.line {
+  border-top: 0.063rem solid #ffffff;
+  padding: 0;
+  }
+
+/*final del footer*/
+.copyright {
+  display: flex;
+  margin:0.5rem auto;
+  justify-content:center;
+  color:#ffffff;
+}
+  
