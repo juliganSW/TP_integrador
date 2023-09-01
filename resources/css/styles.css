@@ -6,7 +6,12 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+
 }
 
 /* Estilos para la barra de navegacion */
@@ -98,6 +103,20 @@ h4.titulo {
   font-size: 3rem;
 }
 
+.linea-medio{
+  display:flex;
+  align-items: center;
+  font-size: 2rem;
+  
+}
+.linea-medio::before,
+.linea-medio::after {
+  content: "";
+  flex: 0.5;
+  border-top: 1px solid white; /* Cambia el color y estilo de la línea según tus preferencias */
+  margin: 0 10px; /* Espacio entre el texto y las líneas */
+}
+
 .fade-in-text {
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -178,11 +197,11 @@ h4.titulo {
 }
 
 /* Seccion donde se muestran imagenes de habitaciones */
-Section.rooms h1 {
+ Section.rooms h1 {
   color: #ffd90092;
   font-size: 2rem;
   text-align: center;
-}
+} 
 .grid-rooms {
   display: grid;
   grid-template: 2.25rem 16rem / 0.6fr 0.6fr 0.6fr;
@@ -190,11 +209,11 @@ Section.rooms h1 {
     "arriba arriba arriba"
     "izquierda centro derecha";
   gap: 1.563rem;
-  width: 90%; /* Ancho del contenedor del grid */
+  width: 100%; /* Ancho del contenedor del grid */
   margin: 3rem auto;
-  color: #ffd90092;
-  
+  color:#ffd90092;
 }
+
 .arriba {
   grid-area: arriba;
   text-align: center;
@@ -246,7 +265,8 @@ Section.servicios h1 {
   color: #ffd90092;
   font-size: 2rem;
   text-align: center;
-}
+  margin-bottom: 0.5rem;
+} 
 
 .grid-services {
   display: grid;
@@ -254,9 +274,15 @@ Section.servicios h1 {
   grid-template-columns: repeat(2,1fr); /* Dos columnas de igual ancho*/
   grid-gap: 20px; /* Espacio entre elementos */
   width: 90%; /* Ancho del contenedor del grid */
+  align-items: center;
   margin: 3rem auto; /* Centrar el contenedor */
+  
 }
-
+.grid-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items:center; /* Centrar verticalmente */
+}
 
 .grid-item1 article {
   background: #636363;  /* fallback for old browsers */
@@ -272,6 +298,7 @@ Section.servicios h1 {
   color: white;
   font-size: 1.2rem;
   text-align: center;
+  text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
 }
 .grid-item2 ul{
   margin-top:-1rem;
@@ -291,30 +318,42 @@ Section.servicios h1 {
   width: 90%;
   gap: 20px; /* Espacio entre las columnas */
   padding: 20px;
+  align-items: center;/*centra verticalmente*/
   margin: 3rem auto; /* Centrar el contenedor */
 }
 
-Section.restaurant h1 {
+  Section.restaurant h1 {
   color: #ffd90092;
   font-size: 2rem;
   text-align: center;
-}
+  margin-bottom: 0.5rem;
+}  
+
 .grid-rest img {
   width: 100%;
   border: 0.063rem solid white;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px 0 #ffd90092;
 }
-.grid-column2 article {
+.grid-rest2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar verticalmente */
+  margin-bottom: 0.5rem;
+  color: #ffd90092;
+}
+
+.rest2 article {
   margin-top: 1rem;
   background: #636363;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #000000;
+  color:black;
   font-size: 1.2rem;
   padding: 20px;
-  border: 1px solid #000000;
-  box-shadow: 0 0 10px 0 #ffd90092;
+  border: 1px solid black; 
+   box-shadow: 0 0 10px 0 #ffd90092; 
+ 
 }
 
 /* Seccion eventos */
@@ -324,6 +363,7 @@ Section.restaurant h1 {
   width:90%;
   gap: 20px; /* Espacio entre las columnas */
   padding: 20px;
+  align-items: center;
   margin: 0 auto; /* Centrar el contenedor */
 }
 
@@ -331,6 +371,7 @@ Section.eventos h1 {
   color: #ffd90092;
   font-size: 2rem;
   text-align: center;
+  margin-bottom:0.5rem;
 }
 
 .grid-event img {
@@ -338,6 +379,11 @@ Section.eventos h1 {
   border: 0.063rem solid white;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px 0 #ffd90092;
+}
+.grid-event1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar verticalmente */
 }
 
 .event1 article{
