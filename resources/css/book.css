@@ -1,16 +1,15 @@
 *{
     margin:0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: "PT Sans", sans-serif;
-    font-family: "PT Sans", sans-serif;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
+}
 
 /* Estilos para la barra de navegacion */
 header {
@@ -21,7 +20,7 @@ header {
   
   nav {
     margin-top: 1rem;
-    position:fixed;
+    position: fixed;
     display: flex;
     width: 100%;
     height: 6.5rem;
@@ -31,7 +30,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     font-size: 1.2rem;
     color: #ffffff;
-    box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
     z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
   }
   
@@ -61,92 +60,92 @@ header {
     margin-left: -8rem;
     width: 15rem;
   }
-
-.banner{
+  
+  /* background principal*/
+  .banner {
     position: relative;
-    width: 100vw;
-    height: 180vh;
+    min-width: 90vw;
+    min-height: 100vh;
     text-align: center;
     display: flex;
     align-items: center;
-    
-    background-image: url(../img/pexels-andres-idda-bianchi-13283773.jpg);
+    justify-content: center;
+    background-image:url(../img/pexels-mikhail-nilov-7820321.jpg);
     background-size: cover;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
-    
-}
-.banner:before {
+    font-family: "Caveat", cursive;
+    font-family: "Montserrat", sans-serif;
+  }
+  .banner:before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.649);
-}
-
-
-
-form {
-    position: absolute;
-    left:3rem;
-    top: 9.5rem; /* Ajusta según la altura de tu barra de navegación */
-    background-color: rgba(255, 255, 255, 0.389);
-    width: 400px;
-    
-    padding:5px;
-    border: 1px solid black;
-    color: #232526;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-label {
-     font-weight: bold;
-   }
-
-
-section.advert img{
-    width: 20rem;
-    margin-top: 1rem;
-}
-.circle {
-    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
-    width: 245px;
-    height: 245px;
-    border-radius: 50%; /* Esto crea el círculo */
-    display:flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    text-align: center;
-    color:white;
-    font-size: 16px; /* Tamaño del texto */
-    margin-top: 1.2rem;
-    opacity:85%;
-   
-}
-.tachado {
-    text-decoration: line-through;
-    color:#000000
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .titulo {
+    color: #ffffff;
+    font-size: 5rem;
+    position: relative;
+  }
+  h4.titulo {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  section.banner a.btn{
+    border:1px solid #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    position:relative;
+    text-decoration: none;
+    color:#ffffff;
+    font-weight:bolder;
+    font-size:1.2rem;
   }
   
+  section.banner a.btn:hover{
+    color:#000000;
+    background-color: #ffffffc1;
+  }
+
+  .slide {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+@keyframes slidein {
+    from {
+        transform: translateY(120%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
   
 
- /*contenedor del footer*/
- .foot-container{
+
+
+  /*contenedor del footer*/
+.foot-container{
     background: #403B4A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width:100%;
     display: grid;
-    grid-template: 4.25rem 18rem / 0.8fr 0.8fr 0.8fr;
+    grid-template: 4.25rem 15rem / 0.8fr 0.8fr 0.8fr;
     grid-template-areas:
     "up up up"
     "left center right";
     justify-content: start;
-    gap: 2.5rem;
+    row-gap: 2.5rem;
     }
   
     footer{
@@ -192,6 +191,7 @@ section.advert img{
   .fa-brands:hover {
     color:#fbff00c0;
   }
+  
   .line {
     border-top: 0.063rem solid #ffffff;
     padding: 0;
@@ -204,7 +204,5 @@ section.advert img{
     justify-content:center;
     color:#ffffff;
   }
-  
-  
-  
-
+    
+    

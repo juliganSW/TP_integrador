@@ -106,9 +106,8 @@ h4.titulo {
 .linea-medio{
   display:flex;
   align-items: center;
-  font-size: 2rem;
-  
 }
+
 .linea-medio::before,
 .linea-medio::after {
   content: "";
@@ -398,7 +397,64 @@ Section.eventos h1 {
   box-shadow: 0 0 10px 0 #ffd90092;
 }
 
-/*contenedor del footer*/
+/* contenedor con la info del hotel */
+.info-container {
+  background-color: #403b4a4d;
+  display: grid;
+  grid-template: 1fr 2fr, repeat(3, 1fr); 
+  grid-template-areas:
+  "top top top"
+  "izq medio der";
+   gap: 20px; /* Espacio entre las celdas */
+   width:90%;
+   margin: 3rem auto; /* Centrar el contenedor */
+   justify-content: center;
+   }
+
+  .top{
+    grid-area:top;
+    text-align: center;
+    align-items: center;
+    color:#ffd90092;
+   }
+   .top h1{
+    font-size: 2rem;
+
+   }
+  .izq{
+    grid-area:izq;
+    text-align:center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .medio{
+    grid-area:medio;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .medio i{
+    color:#ffd90092
+  }
+  .der{
+    grid-area: der;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .izq ul li,
+  .der ul li{
+    list-style: none;
+    margin-top: 0.5rem;
+    color:white;
+    text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
+  }
+  .izq ul li i,
+  .der ul li i{
+    color:#ffd90092
+  }
+
+  /*contenedor del footer*/
 .foot-container{
   background: #403B4A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
@@ -410,7 +466,7 @@ Section.eventos h1 {
   "up up up"
   "left center right";
   justify-content: start;
-  row-gap: 2.5rem;
+  gap: 2.5rem;
   }
 
   footer{
@@ -465,7 +521,7 @@ Section.eventos h1 {
 /*final del footer*/
 .copyright {
   display: flex;
-  margin:0.5rem auto;
+  margin:0 auto;
   justify-content:center;
   color:#ffffff;
 }

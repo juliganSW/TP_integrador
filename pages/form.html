@@ -16,12 +16,23 @@
      <script src="https://kit.fontawesome.com/45d21db9a0.js" crossorigin="anonymous"></script>   
 </head>
 <body>
-      <section id="booking">
-       
-        <h2 style="color:white">Complete el formulario para realizar su reserva</h2>
-        <form id="" action="" method="">
+  <header>
+    <nav>
+      <figure>
+        <a href="../index.html"><img src="../resources/img/logoHotel.png" class="logo" alt="logoEmpresa"></a>
+    </figure>
+    <ul>
+        <li><i class="fa-solid fa-house"></i>&nbsp;<a href="../index.html"><b>Inicio</b></a></li>
+        <li><i class="fa-solid fa-bed"></i>&nbsp;<a href=""><b>Habitaciones</b></a></li>
+        <li><i class="fa-solid fa-file"></i>&nbsp;<a href=""><b>Reservas</b></a></li>
+    </ul>
+</nav>
+  </header>
+ <main>
+  <section class="banner">
+    <form id="" action="" method="">
             <div class="mb-3">
-                <legend>Datos Personales</legend>
+            <legend>Reserva Online</legend>
               <label for="exampleInputName" class="form-label">Nombre:</label>
               <input type="text" class="form-control" id="exampleInputName" placeholder="Escriba aqui...">
               </div>
@@ -33,38 +44,35 @@
               <label for="exampleInputCountry" class="form-label">País:</label>
               <input type="text" class="form-control" id="exampleInputCountry" placeholder="Escriba aqui...">
             </div>
-            <div class="mb-3">
-              <label for="exampleInputDni" class="form-label">DNI:</label>
-              <input type="number" class="form-control" id="exampleInputDni" min="0">
-            </div>
-            <legend>Info del registro</legend>
-            <div class="mb-3">
-              <label for="dateEnter" class="form-label">Entrada:</label>
+          <div class="row">
+            <div class="col mb-3">
+              <label for="dateEnter" class="form-label">Ingreso:</label>
               <input type="date" class="form-control" id="dateEnter" name="dateEnter">
             </div>
-            <div class="mb-3">
-              <label for="dateExit" class="form-label">Salida:</label>
+            <div class=" col mb-3">
+              <label for="dateExit" class="form-label">Egreso:</label>
               <input type="date" class="form-control" id="dateExit" name="dateExit">
+            </div>
             </div>
             <div class="input-group-room mb-3">
               <label for="room" class="form-label">Habitaciones:</label>
               <select class="form-select" name="room">
-                  <option selected>Tipo de habitacion</option>
+                  <option selected>Tipo de Habitacion</option>
                   <option value="1">Clasica</option>
                   <option value="2">Suite</option>
                   <option value="3">Ejecutiva</option>
                   </select>
           </div>
-          <div class="mb-3">
-            <label for="examplePerson" class="form-label">Adultos</label>
+          <div class="row">
+          <div class="col mb-3">
+            <label for="examplePerson" class="form-label">Adultos:</label>
             <input type="number" class="form-control" id="examplePerson" min="0">
           </div>
-          <div class="mb-3">
-            <label for="exampleKids" class="form-label">Niños</label>
+          <div class=" col mb-3">
+            <label for="exampleKids" class="form-label">Niños:</label>
             <input type="number" class="form-control" id="exampleKids" min="0">
           </div>
-           <fieldset>
-              <legend>Tipo de contacto</legend>
+          </div>
            <div class="mb-3">
               <label for="exampleInpuTel" class="form-label">Telefono:</label>
               <input type="number" class="form-control" id="exampleInputTel" min="0">
@@ -73,18 +81,69 @@
               <label for="exampleInpuMail" class="form-label">Email:</label>
               <input type="email" class="form-control" id="exampleInputMail" placeholder="Escriba aqui...">
             </div>
-            </fieldset>
-            
-            
-
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-outline-light">Submit</button>
           </form>
+    </section> 
+    <section class="advert">
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+    <figure>
+        <img src="../resources/img/logosafetravels.png" alt="logoSafeTravels">
+      </figure>
+        </div>
+      <div class="col-6 d-flex justify-content-center">
+      <div class="circle">
+        <div class="contenido">
+          <h1>Tax Free</h1>
+          <h1 class="tachado">20% VAT</h1>
+          <p>For<br> non-Argentinians<br>residents</p>
+       </div>
+        
+        </div>
+        </div>
+       </section>
+        </main>
+        <footer>
+          
+            <div class="foot-container"><!--este seria tu grid-container-->
+              <div class="up">
+                  <figure>
+                      <img src="../resources/img/logoHotel.png" class="footer-logo" alt="logoEmpresa">
+                  </figure>
+                  <h1>MADERO URBAN OASIS HOTEL & RESORT</h1>
+              </div>
+              <div class="left">
+                  <ul>
+                  <li><h4>Atencion al público</h4><p><i class="fa-solid fa-phone"></i>&nbsp;0800-444-0000</p></li>
+                  <li><h4>Contacto</h4><p><i class="fa-solid fa-envelope"></i>&nbsp;contacto@MaderoUrban.com.ar</p></li>
+                  <li><u>Informacion general</u></li>
+                  <li><u>Asistencia al viajero</u></li>
+                  <li><u>RRHH</u></li>
+                  <li><u>Contrataciones</u></li>
+                  <li><u>Sugerencias</u></li>
+                  </ul>
+  
+              </div>
+              <div class=""></div>
+              <div class="right">
+                  <h4>Nuestras redes sociales</h4>
+                  <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                  <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                  <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                  <a href="https://web.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                  </div>
+              <div class=""></div>
+              <div class=""></div>
+             </div>
+             <div class="line"></div>
+  
+           <div class="copyright">
+              <small>
+                  © 2023 . MADERO URBAN OASIS . TODOS LOS DERECHOS RESERVADOS. WEB BY PIEDRABUENA/CODO A CODO
+              </small>
 
-        </section> 
+          </div>
+        </footer>
 
 
 
