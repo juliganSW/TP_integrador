@@ -19,11 +19,11 @@ header {
   }
   
   nav {
-    margin-top: 1rem;
+    top:0;
     position: fixed;
     display: flex;
     width: 100%;
-    height: 6.5rem;
+    height: 5rem;
     justify-content: space-around;
     align-items: center;
     padding: 0 1.25rem;
@@ -32,7 +32,10 @@ header {
     color: #ffffff;
     box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
     z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
-  }
+    font-family: "Caveat", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+  
   
   nav ul {
     display: flex; /*se ubica en línea la lista*/
@@ -58,7 +61,7 @@ header {
   .logo {
     margin-top: 1.5rem;
     margin-left: -8rem;
-    width: 15rem;
+    width: 12rem;
   }
   
   /* background principal*/
