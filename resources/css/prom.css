@@ -36,7 +36,17 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background-color: rgba(0, 0, 0, 0.203); /* Fondo semitransparente */
+  background: #403b4a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ /* Fondo semitransparente */
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
@@ -72,11 +82,10 @@ nav ul li a:hover {
   width: 12rem;
 }
 .banner{
-position: relative;
-/*background-image: url(../img/pexels-kelly-2869215.jpg);*/
- min-width: 90vw;
- min-height: 65vh;
-  
+  position: relative;
+  background-image: url(../img/pexels-kelly-2869215.jpg); 
+  min-width: 90vw;
+  min-height: 60vh;
   background-size: cover;
   background-position:center;
   -webkit-background-size: cover;
@@ -86,16 +95,15 @@ position: relative;
   font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
 }
-.banner:before {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 6.5rem;
-  left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* Cambia el valor de alfa (0.5) para ajustar la opacidad */
 }
-
 /* .titulo {
   color:white;
   font-size: 4rem;
@@ -162,18 +170,30 @@ h4.titulo {
 } */
 
 /* seccion promociones */
-.promociones h1{
-  margin-top: 2rem;
-  font-size:2.5rem ;
+.promociones h1 {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
   color: #ffd90092;
   text-align: center;
-  }
-  .promociones article{
-    color:white;
-    text-align: center;
-    background-color: #cba50dd9;
+}
+/*Contenedor con la presentacion*/
+.grid-container-prom {
+  display: grid;
+  grid-template-rows: 1fr; /* Una fila */
+  width: 90%; /* Ancho del contenedor del grid */
+  margin: 0 auto; /* Centrar el contenedor */
+}
 
-  }
+.item2 {
+  margin-top: 1rem;
+  background-color: #403b4a4d;
+  padding: 10px;
+  text-align: center;
+  color:#ffffffb9;
+  text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
+  box-shadow: 0 0 10px 0 #ffd90092; 
+}
+
 
 /* promociones */
 .grid-prom {
@@ -185,7 +205,6 @@ h4.titulo {
   color: white;
   font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .celda-promo {
