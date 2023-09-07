@@ -65,15 +65,22 @@ header {
     width: 12rem;
   }
 
+  
+.texto-fijo{
+  position: relative;
+  z-index:2;
+}
   .titulo {
     color: white;
     font-size: 3.5rem;
     position: relative;
+    
   }
+
   h4.titulo {
     margin-top: 2rem;
     color:white;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
 
@@ -85,7 +92,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/vista-lujoso-pasillo-hotel_23-2150683487.avif);
+    font-family: "Caveat", cursive;
+    font-family: "Montserrat", sans-serif;
+    
+    
+}
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/vista-lujoso-pasillo-hotel\ \(1\).jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -93,20 +112,20 @@ header {
     -moz-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
-    font-family: "Caveat", cursive;
-    font-family: "Montserrat", sans-serif;
+    animation: fadeIn 3s; /* Aplicar la animación a la imagen de fondo */
+    }
     
-}
-  .banner:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}  
+  
+  /* .fade-in-image { 
+    
+    animation: fadeIn 5s; 
+  }  */
 
+  @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }  
+    }
+    
 form {
     left:3rem;
     top: 9.5rem; /* Ajusta según la altura de tu barra de navegación */
@@ -118,14 +137,14 @@ form {
     padding:5px;
     border: 1px solid #a1ab5891 ;
     color:#ffffffc9;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 label {
      font-weight: bold;
    }
 
 .advert{
-  background: #000000;  /* fallback for old browsers */
+background: #000000;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 

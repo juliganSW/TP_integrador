@@ -9,13 +9,10 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
-  
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-
-
 }
 
 /* Estilos para la barra de navegacion */
@@ -91,7 +88,7 @@ nav ul li a:hover {
   font-family: "Montserrat", sans-serif;
 
 }
-.banner:before {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
@@ -337,10 +334,11 @@ Section.servicios h1 {
 }  
 
 .grid-rest img {
-  width: 100%;
+  width: 90%;
   border: 0.063rem solid white;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px 0 #ffd90092;
+  
 }
 .grid-rest2 {
   display: flex;
@@ -359,7 +357,7 @@ Section.servicios h1 {
   font-size: 1.2rem;
   padding: 20px;
   border: 1px solid black; 
-   box-shadow: 0 0 10px 0 #ffd90092; 
+  box-shadow: 0 0 10px 0 #ffd90092; 
  
 }
 
@@ -371,7 +369,8 @@ Section.servicios h1 {
   gap: 20px; /* Espacio entre las columnas */
   padding: 20px;
   align-items: center;
-  margin: 0 auto; /* Centrar el contenedor */
+  margin: 3rem auto; /* Centrar el contenedor */
+  
 }
 
 Section.eventos h1 {
@@ -382,7 +381,7 @@ Section.eventos h1 {
 }
 
 .grid-event img {
-  width: 100%;
+  width: 90%;
   border: 0.063rem solid white;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px 0 #ffd90092;
@@ -404,6 +403,31 @@ Section.eventos h1 {
   border: 1px solid #000000;
   box-shadow: 0 0 10px 0 #ffd90092;
 }
+
+.grid-iframe {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding:30px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.grid-iframe h1{
+	font-size: 2rem;
+  color:#ffd90092;
+}
+.grid-iframe h2, h4{
+    color:#ffffff;
+}
+.locacion h2, h4 i{
+ text-align: start;
+  margin:1rem;
+}
+
+  
+  
 
 /* contenedor con la info del hotel */
 .info-container {

@@ -83,7 +83,7 @@ header {
     font-family: "Caveat", cursive;
     font-family: "Montserrat", sans-serif;
   }
-  .banner:before {
+  .banner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -120,23 +120,20 @@ header {
   }
 
   .slide {
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: slidein;
   }
 
 @keyframes slidein {
     from {
-        transform: translateY(120%);
+        transform: translateY(100%);
     }
     to {
         transform: translateY(0);
     }
 }
-  
 
-
-
-  /*contenedor del footer*/
+/*contenedor del footer*/
 .foot-container{
     background: #403B4A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
