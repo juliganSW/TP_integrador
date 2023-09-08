@@ -31,10 +31,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
   font-size: 1.2rem;
   color: #ffffff;
-  box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
   font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
@@ -58,13 +58,12 @@ nav ul li a {
 nav ul li a:hover {
   color: #000000;
   background-color: #ffd90092;
-  
   border-radius: 5px;
 }
 
 .logo {
   margin-top: 1.5rem;
-  margin-left: -8rem;
+  margin-left: -5rem;
   width: 12rem;
 }
 
@@ -77,7 +76,7 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-   background-image: url(../img/vista-lujoso-espacio-interior-hotel.jpg); 
+  background-image: url(../img/vista-lujoso-espacio-interior-hotel.jpg); 
   background-size: cover;
   background-position: center;
   -webkit-background-size: cover;
@@ -86,7 +85,6 @@ nav ul li a:hover {
   -ms-background-size: cover;
   font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
-
 }
 .banner::before {
   content: "";
@@ -274,7 +272,7 @@ Section.servicios h1 {
 
 .grid-services {
   display: grid;
-  grid-template-rows: repeat(2, 0.5fr); /* Dos filas automáticas */
+  grid-template-rows: repeat(2, 0.5fr); /* Dos filas */
   grid-template-columns: repeat(2,1fr); /* Dos columnas de igual ancho*/
   grid-gap: 20px; /* Espacio entre elementos */
   width: 90%; /* Ancho del contenedor del grid */
@@ -485,7 +483,7 @@ Section.eventos h1 {
   .der ul li i{
     color:#ffd90092
   }
-
+  
   /*contenedor del footer*/
 .foot-container{
   background: #403B4A;  /* fallback for old browsers */

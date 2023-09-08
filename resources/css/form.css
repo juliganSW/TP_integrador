@@ -114,12 +114,7 @@ header {
     -ms-background-size: cover;
     animation: fadeIn 3s; /* Aplicar la animación a la imagen de fondo */
     }
-    
-  
-  /* .fade-in-image { 
-    
-    animation: fadeIn 5s; 
-  }  */
+ 
 
   @keyframes fadeIn {
       0% { opacity: 0; }
@@ -127,12 +122,9 @@ header {
     }
     
 form {
-    left:3rem;
-    top: 9.5rem; /* Ajusta según la altura de tu barra de navegación */
     background: #3C3B3F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     width: 350px;
     padding:5px;
     border: 1px solid #a1ab5891 ;
@@ -140,13 +132,18 @@ form {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 label {
-     font-weight: bold;
-   }
+    font-weight: bold;
+}
+
+
+  
+
+
 
 .advert{
-background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .advert img{
@@ -189,7 +186,7 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
   }
   
 /*contenedor del footer*/
- .foot-container{
+.foot-container{
     background: #403B4A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
