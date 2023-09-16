@@ -118,6 +118,16 @@ nav ul li a:hover {
   -o-animation: fadeIn 3s;
   -ms-animation: fadeIn 3s;
  }
+
+ @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
  .texto-fijo{
   position: relative;
   z-index:2;
@@ -136,17 +146,6 @@ h4.titulo {
 }
 
 
- 
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /* @-moz-keyframes fadeIn {
   0% {
@@ -205,7 +204,7 @@ h4.titulo {
   padding: 10px;
   text-align: center;
   color:#ffffffb9;
-  text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
+ 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64) ;
 }
 

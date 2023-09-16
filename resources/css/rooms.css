@@ -100,7 +100,7 @@ nav ul li a:hover {
   padding: 10px;
   text-align: center;
   color: #ffffffb9;
-  text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
+  
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64) ;
 }
 .item2 ul {
@@ -150,7 +150,7 @@ nav ul li a:hover {
 }
 
 .card .footer {
-  padding: 10px;
+  padding: 20px;
 }
 .btn {
   margin-top: 1rem;
@@ -161,11 +161,85 @@ nav ul li a:hover {
   border: 1px solid white;
   width: 40%;
 }
-
-.btn:hover {
+/* .btn:hover {
   background-color: white;
   color: #000000;
+} */
+
+/*Estilos para los "pop ups" de los detalles"*/
+.overlay { 
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+.footer{
+  margin-top: 1rem;
+}
+.footer a{
+  text-decoration: none;
+  color:white;
+  border:1px solid white;
+  padding:10px 20px;
+}
+
+.footer a:hover{
+  color:#000000;
+  background-color: white;
+}
+
+#popupBody{
+    width: 46%;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #CCC;
+    background: rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin: 20% auto;
+}
+
+#popupBody h1{
+  text-align: center;
+  color:rgb(140, 105, 15);
+  font-size: 1.5rem;
+}
+#cerrar{
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color:rgb(140, 105, 15);
+transition: all 200ms;
+
+  }
+  .linea-medio{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  
+  .linea-medio::before,
+  .linea-medio::after {
+    content: "";
+    flex: 0.4;
+    border-top: 1px solid black; /* Cambia el color y estilo de la línea según tus preferencias */
+    margin: 0 10px; /* Espacio entre el texto y las líneas */
+    
+  }
 
 /*contenedor del footer*/
 .foot-container {
