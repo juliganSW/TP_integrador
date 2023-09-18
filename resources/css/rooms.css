@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -152,22 +155,14 @@ nav ul li a:hover {
 .card .footer {
   padding: 20px;
 }
-.btn {
-  margin-top: 1rem;
-  background-color: transparent;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border: 1px solid white;
-  width: 40%;
-}
+
 /* .btn:hover {
   background-color: white;
   color: #000000;
 } */
 
 /*Estilos para los "pop ups" de los detalles"*/
-.overlay { 
+ /* .overlay { 
   position: fixed;
   top: 0;
   bottom: 0;
@@ -182,11 +177,11 @@ nav ul li a:hover {
 .overlay:target{
     visibility: visible;
     opacity: 1;
-}
+} */
 .footer{
   margin-top: 1rem;
 }
-.footer a{
+/* .footer a{
   text-decoration: none;
   color:white;
   border:1px solid white;
@@ -223,15 +218,94 @@ text-decoration: none;
 color:rgb(140, 105, 15);
 transition: all 200ms;
 
+  } */
+  
+   
+.btnModal {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 40%;
+  }
+  
+  .btnModal:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  .contModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* z-index: 1000; */
+  }
+  
+  .contModal .modal {
+    position: relative;
+    width:46%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px #CCC;
+    color: black;
+    border-radius: 10px;
+    padding: 2%;
+    animation: animModal 1s ease;
+  }
+  .contModal .modal h2{
+    color:rgb(140, 105, 15);
+    font-size: 1.5rem;
+
+  }
+  
+  .contModal .modal .closeModal {
+    color:rgb(140, 105, 15);
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .contModal .modal .closeModal:hover{
+    color:#989898;
+  }
+  
+  
+  /* .contModal .modal .titleModal {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  } */
+  
+  .contModal .modal .contenidoModal {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  @keyframes animModal {
+    0% {
+      opacity: 0.3;
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
   }
   .linea-medio{
     display:flex;
     align-items: center;
     justify-content: center;
-    
+    text-transform: uppercase;
   }
-  
-  
   .linea-medio::before,
   .linea-medio::after {
     content: "";
