@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -133,8 +133,30 @@ h4.titulo {
     opacity: 1;
   }
 }
+section.anuncio{
+  margin-top: 3rem;
+  text-align: center;
+}
+section.anuncio h1{
+  color:white;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+.check{
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-form {
+.booking {
   background: #3c3b3f; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -270,7 +292,7 @@ select.form-select{
     #e7e9bb,
     #403b4a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  width: 100%;
+  /* width: 100%; */
   /* display: grid;
     grid-template: 4.25rem 18rem / 0.8fr 0.8fr 0.8fr;
     grid-template-areas:
@@ -278,7 +300,9 @@ select.form-select{
     "left center right"; */
   /* justify-content: start; */
   /* gap: 2.5rem; */
+
 }
+
 
 .foot-container h1 {
   font-size: 2rem;
@@ -288,9 +312,9 @@ select.form-select{
   font-size: 1.2rem;
 }
 
-footer {
-  background-color: #a1ab5891;
-}
+/* footer {
+  background-color: #a1ab5891
+} */
 
 .up {
   /* grid-area:up; */
@@ -300,6 +324,7 @@ footer {
   font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
 }
+
 
 .left ul li {
   list-style: none;
@@ -345,7 +370,7 @@ footer {
 /*final del footer*/
 .copyright {
   display: flex;
-  margin: 0 auto;
+  margin: 0.3rem auto;
   justify-content: center;
   color: #ffffff;
 }

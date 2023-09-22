@@ -338,9 +338,7 @@ transition: all 200ms;
   gap: 2.5rem;
 }
 
-footer {
-  background-color: #a1ab5891;
-}
+
 
 .up {
   grid-area: up;
@@ -399,7 +397,7 @@ footer {
 /*final del footer*/
 .copyright {
   display: flex;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   justify-content: center;
   color: #ffffff;
 }

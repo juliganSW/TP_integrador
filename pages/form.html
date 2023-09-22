@@ -10,6 +10,9 @@
   <!-- link para bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Biblioteca flatpickr-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
   <!--fuente principal-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +23,7 @@
 
 <body>
   <header>
+    
     <nav>
       <figure>
         <a href="../index.html"><img src="../resources/img/logoHotel.png" class="logo" alt="logoEmpresa"></a>
@@ -30,38 +34,67 @@
         <li><a href="./prom.html"><b>Promociones</b></a></li>
       </ul>
     </nav>
+    
   </header>
   <main>
+    
     <section class="banner">
+      
       <div class="texto-fijo">
         <h1 class="titulo"><b>Madero Urban Oasis</b>
           <hr>
         </h1>
         <h4 class="titulo"><b>Hotel & Resort</b></h4>
       </div>
+     
     </section>
+    <section class="anuncio">
+      
+      <div class="col-12 d-flex justify-content-center">
+        <h1>Reserve desde aquí, es seguro, fácil<br> y ahorra dinero</h1>
+      </div>
+      
+    
+      </section>
+
+      <div class="container">
+        <form>
+          <div class="row justify-content-center p-md-3 check">
+            <div class="col-md-2 form-group">
+              
+              <input type="text" class="form-control" id="dateInput1" placeholder="Check-In">
+            </div>
+            <div class="col-md-2 form-group">
+              
+              <input type="text" class="form-control" id="dateInput2" placeholder="Check-Out">
+            </div>
+            <div class="col-md-2 form-group">
+              <input type="number" min="1" max="20" class="form-control" id="pasajeros" placeholder="Pasajeros">
+              
+              
+              
+            </div>
+            <div class="col-md-2 form-group">
+              
+              <input type="number" min="0" max="999" class="form-control" id="promocode" placeholder="Código Promo">
+              
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-light">Enviar</button>
+            </div>
+            
+          </div>
+          
+        </form>
+      </div>
+      
+      
 
     <section>
-      <div class="container-fluid mt-5 mb-5">
+      <div class="container mt-5 mb-5">
         <div class="row text-center">
-          <div class="col-6 d-flex align-items-center justify-content-center">
-            <div class="row payments">
-              <h1 class="linea-medio">Formas de Pago</h1>
-              <div class="col mt-5">
-                <h4>Depósito Bancario</h4>
-                <img src="../resources/img/banco.png" width="100" alt="imgBanco">
-              </div>
-              <div class="col mt-5">
-                <h4>Tarjetas de Crédito</h4>
-                <img src="../resources/img/tarjetas-de-credito.png" width="100" alt="imgTarjeta">
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="col-6 d-flex justify-content-center">
-            <form id="" action="" method="">
+          <div class="col-12 d-flex justify-content-center">
+            <form class="booking" id="" action="" method="">
               <div class="mb-3">
                 <legend>Reserva Online</legend>
                 <figure>
@@ -76,12 +109,12 @@
                 <input type="text" class="form-control form-control-sm" id="exampleInputLastName"
                   placeholder="Escriba aqui...">
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <label for="exampleInputCountry" class="form-label">País:</label>
                 <input type="text" class="form-control form-control-sm" id="exampleInputCountry"
                   placeholder="Escriba aqui...">
-              </div>
-              <div class="row">
+              </div> -->
+              <!-- <div class="row">
                 <div class="col mb-3">
                   <label for="dateEnter" class="form-label">Ingreso:</label>
                   <input type="date" class="form-control form-control-sm" id="dateEnter" name="dateEnter">
@@ -90,7 +123,7 @@
                   <label for="dateExit" class="form-label">Egreso:</label>
                   <input type="date" class="form-control form-control-sm" id="dateExit" name="dateExit">
                 </div>
-              </div>
+              </div> -->
               <div class="input-group-room mb-3">
                 <label for="room" class="form-label">Habitacion:</label>
                 <select class="form-select form-select-sm" name="room">
@@ -119,15 +152,30 @@
                 <input type="email" class="form-control form-control-sm" id="exampleInputMail"
                   placeholder="Escriba aqui...">
               </div>
-              <button type="submit" class="btn btn-outline-light">Enviar</button>
+              <button type="button" class="btn btn-outline-light">Enviar</button>
             </form>
+          </div>
+        </div>
+        <div class="row text-center mt-5">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="row payments">
+              <h1 class="linea-medio">Formas de Pago</h1>
+              <div class="col mt-5">
+                <h4>Depósito Bancario</h4>
+                <img src="../resources/img/banco.png" width="100" alt="imgBanco">
+              </div>
+              <div class="col mt-5">
+                <h4>Tarjetas de Crédito</h4>
+                <img src="../resources/img/tarjetas-de-credito.png" width="100" alt="imgTarjeta">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="advert">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-4 d-flex justify-content-center">
             <figure>
@@ -156,61 +204,62 @@
       </div>
     </section>
   </main>
+
   <footer>
-
-    <div class="foot-container container-fluid">
-      <div class="row">
-        <div class="col-12 up d-flex align-items-start justify-content-center text-center mt-3">
-          <figure>
-            <img src="../resources/img/logoHotel.png" class="footer-logo" alt="logoEmpresa">
-          </figure>
-          <h1><b>MADERO URBAN OASIS HOTEL & RESORT</b></h1>
+    <div class="foot-container">
+       <div class="container">
+        <div class="row">
+          <div class="col-12 up d-flex align-items-start justify-content-center text-center mt-3">
+            <figure>
+              <img src="../resources/img/logoHotel.png" class="footer-logo" alt="logoEmpresa">
+            </figure>
+            <h1><b>MADERO URBAN OASIS HOTEL & RESORT</b></h1>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-4 left">
-          <ul>
-            <li>
-              <h4>Atencion al público</h4>
-              <p><i class="fa-solid fa-phone"></i>&nbsp;0800-444-0000</p>
-            </li>
-            <li>
-              <h4>Contacto</h4>
-              <p><i class="fa-solid fa-envelope"></i>&nbsp;contacto@MaderoUrban.com.ar</p>
-            </li>
-            <li><u>Informacion general</u></li>
-            <li><u>Asistencia al viajero</u></li>
-            <li><u>RRHH</u></li>
-            <li><u>Contrataciones</u></li>
-            <li><u>Sugerencias</u></li>
-          </ul>
+        <div class="row custom" >
+          <div class="col-4 left" >
+            <ul>
+              <li>
+                <h4>Atencion al público</h4>
+                <h6><i class="fa-solid fa-phone"></i>&nbsp;0800-444-0000</h6>
+              </li>
+              <li>
+                <h4>Contacto</h4>
+                <h6><i class="fa-solid fa-envelope"></i>&nbsp;contacto@MaderoUrban.com.ar</h6>
+              </li>
+              <li><u>Informacion general</u></li>
+              <li><u>Asistencia al viajero</u></li>
+              <li><u>RRHH</u></li>
+              <li><u>Contrataciones</u></li>
+              <li><u>Sugerencias</u></li>
+            </ul>
+          </div>
+          <div class="col-4 center">
+            <h4>Reconocimientos</h4>
+            <figure>
+              <img src="../resources/img/TA-gold-logo-255x300.png.webp" alt="">
+            </figure>
+            <figure>
+              <img src="../resources/img/dark-large-travel-awards.webp" alt="">
+            </figure>
+          </div>
+          <div class="col-4 right">
+            <h4>Nuestras redes sociales</h4>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://web.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+          </div>
         </div>
-        <div class="col-4 center">
-          <h4>Reconocimientos</h4>
-          <figure>
-            <img src="../resources/img/TA-gold-logo-255x300.png.webp" alt="">
-          </figure>
-          <figure>
-            <img src="../resources/img/dark-large-travel-awards.webp" alt="">
-          </figure>
-        </div>
-        <div class="col-4 right">
-          <h4>Nuestras redes sociales</h4>
-          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-          <a href="https://web.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-
-        </div>
-      </div>
+       </div>
     </div>
+
     <div class="line"></div>
 
     <div class="copyright">
       <small>
         © 2023 . MADERO URBAN OASIS . TODOS LOS DERECHOS RESERVADOS. WEB BY PIEDRABUENA/CODO A CODO
       </small>
-
     </div>
   </footer>
 
@@ -223,6 +272,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../js/datepicker.js"></script>
+    
+ 
 </body>
 
 </html>
