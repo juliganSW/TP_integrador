@@ -35,6 +35,21 @@ header {
     z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
     font-family: "Caveat", cursive;
     font-family: "Montserrat", sans-serif;
+    transition: top 0.5s ease;
+}
+nav.scroll-down {
+  background: #403b4a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, /* Cambia "your-color" al color que desees */
+  box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
 }
   
   
