@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -31,12 +31,11 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
+  background-color: rgba(255, 255, 255, 0.3); /* Blanco con 50% de transparencia */
   font-size: 1.2rem;
   color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
-  font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
   transition: top 0.5s ease;
 }
@@ -99,7 +98,7 @@ nav ul li a:hover {
   -moz-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-  font-family: "Caveat", cursive;
+  
   font-family: "Montserrat", sans-serif;
 }
 .banner::before {
@@ -193,7 +192,9 @@ h4.titulo {
   font-size: 2.5rem;
   color: #ffd90092;
   text-align: center;
+  
 }
+
 /*Contenedor con la presentacion*/
 .grid-container {
   display: grid;
@@ -214,11 +215,12 @@ h4.titulo {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64) ;
 }
 
-/* Seccion donde se muestran imagenes de habitaciones */
+/* Seccion de habitaciones donde está el carrusel */
  Section.rooms h1 {
   color: #ffd90092;
   font-size: 2rem;
   text-align: center;
+  
 } 
 .grid-rooms {
   display: grid;
@@ -402,16 +404,11 @@ Section.servicios h1 {
   display: grid;
   grid-template-rows: repeat(2, 0.5fr); /* Dos filas */
   grid-template-columns: repeat(2,1fr); /* Dos columnas de igual ancho*/
-  grid-gap: 20px; /* Espacio entre elementos */
+  gap: 20px; /* Espacio entre elementos */
   width: 90%; /* Ancho del contenedor del grid */
   align-items: center;
   margin: 3rem auto; /* Centrar el contenedor */
   
-}
-.grid-item2 {
-  display: flex;
-  flex-direction: column;
-  align-items:center; /* Centrar verticalmente */
 }
 
 .grid-item1 article {
@@ -425,14 +422,20 @@ Section.servicios h1 {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64) ;
 }
 .grid-item2 {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-item2 {
   color: white;
   font-size: 1.2rem;
-  text-align: center;
   text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
 }
+
 .grid-item2 ul{
   margin-top:-1rem;
 }
+
 .grid-item2 ul li {
   list-style: none;
   margin-top: 0.5rem;
@@ -555,12 +558,9 @@ Section.eventos h1 {
   color: rgba(255, 0, 0, 0.548);
 }
 
-  
-  
-
 /* contenedor con la info del hotel */
 .info-container {
-  background-color: #403b4a4d;
+  background-color:#403b4a4d;
   display: grid;
   grid-template: 1fr 2fr, repeat(3, 1fr); 
   grid-template-areas:
@@ -568,39 +568,45 @@ Section.eventos h1 {
   "izq medio der";
    gap: 20px; /* Espacio entre las celdas */
    width:90%;
+   padding: 20px;
    margin: 3rem auto; /* Centrar el contenedor */
-   justify-content: center;
-   }
+   /* justify-content: center; */
+  }
 
   .top{
     grid-area:top;
     text-align: center;
-    align-items: center;
     color:#ffd90092;
    }
+
    .top h1{
     font-size: 2rem;
+  }
 
-   }
   .izq{
     grid-area:izq;
-    text-align:center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 1.2rem;
   }
   .medio{
     grid-area:medio;
     text-align: center;
-    align-items: center;
     font-size: 1.2rem;
   }
+
   .medio i{
     color:#ffd90092
   }
+
   .der{
     grid-area: der;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    
+    
     font-size: 1.2rem;
   }
   .izq ul li,
@@ -614,6 +620,7 @@ Section.eventos h1 {
   .der ul li i{
     color:#ffd90092
   }
+
   
   /*contenedor del footer*/
 .foot-container{
@@ -626,24 +633,29 @@ Section.eventos h1 {
   grid-template-areas:
   "up up up"
   "left center right";
-  justify-content: start;
-  gap: 2.5rem;
+   gap: 2rem;
+   margin: 0 auto;
   }
 
   
 .up{
   grid-area:up;
-  text-align: center;
   display: flex;
+  justify-content:center;
   align-items: center;
-  font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
+}
+
+.footer-logo{
+  width: 10rem; 
+  margin-top: 1.2rem;
+  
 }
 
 .left{
   grid-area:left;
-  margin-left: 1rem;
-  
+  display: flex;
+  justify-content: center;
 }
 
 .left ul li{
@@ -651,15 +663,26 @@ Section.eventos h1 {
   margin-top: 0.5rem;
 }
 
+
 .right{
-  grid-area: right;
+ grid-area: right;
+ text-align: center;
 }
+
+.right ul{
+  display: flex;
+  justify-content: center;
+}
+
+.right ul li{
+  list-style: none;
+}
+
 .center{
   grid-area: center;
   text-align: center;
-  align-items: center;
-  
 }
+
 .left h4,
 .center h4,
 .right h4 {
@@ -671,11 +694,7 @@ Section.eventos h1 {
   margin-top: 0.5rem;
 }
   
-.footer-logo{
-  width: 10rem; 
-  margin-top: 2rem;
-  margin-left:5rem;
-}
+
 /*íconos de las redes sociales en el footer*/
 .fa-brands {
   margin-top: 1rem;

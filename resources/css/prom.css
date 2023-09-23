@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -265,6 +268,33 @@ h4.titulo {
   justify-content: start;
   margin-bottom: 1rem;
  
+}
+.back-to-top{
+  display: grid;
+  grid-template-rows: 1fr;
+  
+  margin:1rem auto;
+}
+.centro{
+  
+  display: flex;
+  justify-content: center;
+}
+
+/*boton de volver*/
+.btn-back {
+  background-color: transparent;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 0 rgba(255, 255,255, 0.5) ;
+  }
+
+.btn-back:hover {
+  background-color:#ffffff;
+  color:#000000;
 }
 
 /*contenedor del footer*/

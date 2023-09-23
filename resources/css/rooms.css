@@ -156,6 +156,35 @@ nav ul li a:hover {
   padding: 20px;
 }
 
+.back-to-top{
+  display: grid;
+  grid-template-rows: 1fr;
+  
+  margin:1rem auto;
+}
+.centro{
+  
+  display: flex;
+  justify-content: center;
+}
+
+/*boton de volver*/
+.btn {
+  background-color: transparent;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #ffd90092;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 0, 0.547) ;
+  }
+
+.btn:hover {
+  background-color:#ffffff;
+  color:#000000;
+}
+
+
 /* .btn:hover {
   background-color: white;
   color: #000000;
