@@ -5,7 +5,7 @@
 } 
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'Roboto', sans-serif; 
   background: #232526; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -50,8 +50,6 @@ nav {
   color: #ffffff;
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.6);
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
-  font-family: "Caveat", cursive;
-  font-family: "Montserrat", sans-serif;
 }
 
 nav ul {
@@ -103,7 +101,6 @@ h4.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
 }
 .banner::before {
@@ -133,12 +130,12 @@ h4.titulo {
   }
 }
 section.anuncio{
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   text-align: center;
 }
 section.anuncio h1{
   color:white;
-  font-size: 2.3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 .check{
@@ -320,8 +317,6 @@ select.form-select{
   /* grid-area:up; */
   /* text-align: center; */
   /* display: flex; */
-
-  font-family: "Caveat", cursive;
   font-family: "Montserrat", sans-serif;
 }
 
