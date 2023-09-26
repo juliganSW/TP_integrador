@@ -36,9 +36,9 @@ nav {
   color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
-  
   transition: top 0.5s ease;
 }
+
 nav.scroll-down {
   background: #403b4a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -54,8 +54,6 @@ nav.scroll-down {
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
 }
 
-
-
 nav ul {
   display: flex; /*se ubica en línea la lista*/
   margin: 0rem;
@@ -65,7 +63,6 @@ nav ul li {
   list-style: none; /*se eliminan las viñetas de los elementos de la lista*/
   margin: 0 1.563rem;
 }
-
 nav ul li a {
   text-decoration: none; /*se elimina el subrayado a los elementos*/
   color: #ffffff;
@@ -82,6 +79,109 @@ nav ul li a:hover {
   width: 12rem;
 }
 
+ /*ckeck para menú hamburguesa que no es visible*/
+nav input[type="checkbox"] {
+  display: none;
+}
+
+nav label {
+  display: none;
+  cursor: pointer;
+}
+
+/*queries para pantallas pequeñas*/
+@media only screen and (max-width:768px) {
+  nav{
+    background: #403b4a;
+    background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a); 
+    background: linear-gradient(to right,#e7e9bb,#403b4a); 
+}
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #403b4a;
+    background: -webkit-linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+   ); 
+    background: linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); 
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.313rem #00000033;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    
+  }
+
+  nav li {
+    line-height: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid #333;
+    margin: 0;
+    text-align: center;
+  }
+ 
+  
+  nav li:hover{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.547) ;
+
+  }
+  nav ul li a:hover {
+    color: #000000;
+    background-color: transparent;
+  }
+
+  .fa-solid.fa-location-dot{
+    display: none;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+ 
+ 
+input[type="checkbox"]:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
+
+  .logo {
+    margin-left: -15rem;
+  }
+
+
+/*barras del menú hamburguesa que ahora son visibles*/
+  label i{
+    display: block;
+    color:#ffd900
+  }
+  label i:hover{
+    color: white;
+  }
+ 
+}
+ 
 /* background principal*/
 .banner {
   position: relative;
@@ -98,7 +198,6 @@ nav ul li a:hover {
   -moz-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-  
   font-family: "Montserrat", sans-serif;
 }
 .banner::before {
@@ -109,6 +208,7 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  
 }
 .titulo {
   color: white;
@@ -186,10 +286,6 @@ h4.titulo {
     opacity: 1;
   }
 }
-/* Títulos de las secciones*/
-section h1{
-font-family: 'Cormorant Garamond', serif;
-}
 
 /*titulo principal*/
 .presentacion h1 {
@@ -197,9 +293,9 @@ font-family: 'Cormorant Garamond', serif;
   font-size: 3rem;
   color: #ffd90092;
   text-align: center;
-  
+  font-family: 'Cormorant Garamond', serif;
 }
-
+  
 /*Contenedor con la presentacion*/
 .grid-container {
   display: grid;
@@ -225,9 +321,9 @@ font-family: 'Cormorant Garamond', serif;
   color: #ffd90092;
   font-size: 2.5rem;
   text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+}
 
-  
-} 
 .grid-rooms {
   display: grid;
   grid-template: 2.25rem 28rem / 1fr 1fr 1fr;
@@ -250,28 +346,6 @@ font-family: 'Cormorant Garamond', serif;
   margin-bottom: 0.5rem;
 }
 
-/* .grid-item img {
-  width: 20rem;
-  align-items: center;
-  border: 0.063rem solid white;
-  border-radius: 0.625rem;
-  box-shadow: 0 0 10px 0 #ffd90092;
-  cursor: pointer;
-  transition: 1s;
-}
-.grid-item img:hover {
-  transform: scale(1.03);
-  transition: 0.9s;
-  box-shadow: 0 0 10px 0 white;
-} */
-
-/* .izquierda {
-  grid-area: izquierda;
-  text-align: center;
-  border-radius: 0.625rem;
-  font-size: 1.5rem;
-} */
-
 .centro {
   grid-area: centro;
   text-align: center;
@@ -279,12 +353,6 @@ font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
 }
 
-/* .derecha {
-  grid-area: derecha;
-  text-align: center;
-  border-radius: 0.625rem;
-  font-size: 1.5rem;
-} */
 .slide {
   position: relative;
   box-shadow: 0px 1px 6px  #ffd90092;
@@ -397,14 +465,14 @@ font-family: 'Cormorant Garamond', serif;
   color: #428bca;
 }
 
-
 /* Seccion de servicios */
 Section.servicios h1 {
   color: #ffd90092;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
-} 
+  font-family: 'Cormorant Garamond', serif;
+}
 
 .grid-services {
   display: grid;
@@ -414,7 +482,6 @@ Section.servicios h1 {
   width: 90%; /* Ancho del contenedor del grid */
   align-items: center;
   margin: 3rem auto; /* Centrar el contenedor */
-  
 }
 
 .grid-item1 article {
@@ -466,7 +533,8 @@ Section.servicios h1 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
-}  
+  font-family: 'Cormorant Garamond', serif;
+}
 
 .grid-rest img {
   width: 90%;
@@ -513,6 +581,7 @@ Section.eventos h1 {
   font-size: 2.5rem; 
   text-align: center;
   margin-bottom:0.5rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .grid-event img {
@@ -552,7 +621,9 @@ Section.eventos h1 {
 .grid-iframe h1{
 	font-size: 2.5rem;
   color:#ffd90092;
+  font-family: 'Cormorant Garamond', serif;
 }
+
 .grid-iframe h2, h4{
     color:#ffffff;
 }
@@ -612,8 +683,6 @@ Section.eventos h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
     font-size: 1.2rem;
   }
   .izq ul li,
@@ -670,7 +739,6 @@ Section.eventos h1 {
   margin-top: 0.5rem;
 }
 
-
 .right{
  grid-area: right;
  text-align: center;
@@ -701,7 +769,6 @@ Section.eventos h1 {
   margin-top: 0.5rem;
 }
   
-
 /*íconos de las redes sociales en el footer*/
 .fa-brands {
   margin-top: 1rem;
@@ -725,4 +792,7 @@ Section.eventos h1 {
   justify-content:center;
   color:#ffffff;
 }
+
+
+
   
