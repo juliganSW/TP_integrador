@@ -6,17 +6,10 @@
 
 body {
   font-family: 'Roboto', sans-serif; 
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526; 
+  background: -webkit-linear-gradient(to right,#414345,#232526); 
+  background: linear-gradient(to right,#414345,#232526
+  ); 
 }
 
 /* Estilos para la barra de navegacion */
@@ -35,17 +28,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background: #403b4a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e7e9bb,
-    #403b4a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e7e9bb,
-    #403b4a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #403b4a; 
+  background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a); 
+  background: linear-gradient(to right,#e7e9bb,#403b4a); 
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.6);
@@ -53,8 +38,7 @@ nav {
 }
 
 nav ul {
-  
-  margin: 0rem;
+  margin: 0;
   padding: 6.25rem;
 }
 nav ul li {
@@ -100,10 +84,7 @@ nav label {
     left: 0;
     width: 100%;
     background: #403b4a;
-    background: -webkit-linear-gradient(
-    to right,
-    #e7e9bb,
-    #403b4a
+    background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a
    ); 
     background: linear-gradient(
     to right,
@@ -114,11 +95,10 @@ nav label {
     box-shadow: 0 0.125rem 0.313rem #00000033;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 1001;
-    
-  }
+}
 
   nav li {
-    line-height: 30px;
+    line-height: 1.875rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid #333;
     margin: 0;
@@ -237,32 +217,16 @@ section.anuncio h1{
   text-transform: uppercase;
 }
 .check{
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000; 
+  background: -webkit-linear-gradient(to bottom,#434343,#000000); 
+  background: linear-gradient(to bottom,#434343,#000000); 
 }
 
 .booking {
-  background: #3c3b3f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  width: 400px;
+  background: #3c3b3f; 
+  background: -webkit-linear-gradient(to right, #605c3c,#3c3b3f); 
+  background: linear-gradient(to right,#605c3c,#3c3b3f); 
+  width: 25rem;
   padding: 5px;
   border: 1px solid #a1ab5891;
   color: #ffffffc9;
@@ -284,7 +248,7 @@ select.form-select{
 
 .payments {
   width: 90%;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #403b4ac3;
   color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
@@ -298,22 +262,15 @@ select.form-select{
 .linea-medio::after {
   content: "";
   flex: 0.5;
-  border-top: 1px solid white; /* Cambia el color y estilo de la línea según tus preferencias */
-  margin: 0 10px; /* Espacio entre el texto y las líneas */
+  border-top: 1px solid white; 
+  margin: 0 10px; 
 }
 
 .advert {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000;
+  background: -webkit-linear-gradient(to bottom,#434343,#000000); 
+  background: linear-gradient(to bottom,#434343,#000000
+  ); 
 }
 .advert img {
   width: 18rem;
@@ -332,30 +289,28 @@ select.form-select{
     #a2a1dc 87%,
     #b5aee4 100%
   );
-  width: 230px;
-  height: 230px;
+  width: 14.375rem;
+  height:14.375rem;
   border-radius: 50%; /* Esto crea el círculo */
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
   text-align: center;
-  
-  font-size: 14px; /* Tamaño del texto */
+  font-size: 0.875rem; 
   margin-top: 1.2rem;
   opacity: 85%;
   cursor: pointer;
 }
 .circle-2 {
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  width: 230px;
-  height: 230px;
+  width: 14.375rem;
+  height: 14.375rem;
   border-radius: 50%; /* Esto crea el círculo */
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
   text-align: center;
-
-  font-size: 16px; /* Tamaño del texto */
+  font-size: 1rem; 
   margin-top: 1.2rem;
   opacity: 85%;
   cursor: pointer;
@@ -386,18 +341,8 @@ select.form-select{
     to right,
     #e7e9bb,
     #403b4a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* width: 100%; */
-  /* display: grid;
-    grid-template: 4.25rem 18rem / 0.8fr 0.8fr 0.8fr;
-    grid-template-areas:
-    "up up up"
-    "left center right"; */
-  /* justify-content: start; */
-  /* gap: 2.5rem; */
-
-}
-
+  ); 
+ }
 
 .foot-container h1 {
   font-size: 2rem;
@@ -407,38 +352,33 @@ select.form-select{
   font-size: 1.2rem;
 }
 
-/* footer {
-  background-color: #a1ab5891
-} */
-
 .up {
-  /* grid-area:up; */
-  /* text-align: center; */
-  /* display: flex; */
   font-family: "Montserrat", sans-serif;
 }
 
-
 .left ul li {
   list-style: none;
- 
 }
 
+.right {
+  grid-area: right;
+  text-align: center;
+}
+
+.right ul {
+  display: flex;
+  justify-content: center;
+}
 .center {
-  /* grid-area: center; */
-  
   text-align: center;
   align-items: center;
 }
+
 .center img {
   width: 5rem;
   border-radius: 15%;
   margin-top: 0.5rem;
 }
-
-/* .right{
-    grid-area: right;
-  } */
 
 .footer-logo {
   width: 10rem;
@@ -448,7 +388,6 @@ select.form-select{
 
 /*íconos de las redes sociales en el footer*/
 .fa-brands {
-  
   padding: 0.313rem;
   color: white;
 }

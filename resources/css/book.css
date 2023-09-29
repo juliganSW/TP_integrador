@@ -281,7 +281,8 @@ input[type="checkbox"]:checked ~ ul {
   .left{
     grid-area:left;
     margin-left: 1rem;
-    
+    display: flex;
+    justify-content: center;
   }
   
   .left ul li{
@@ -292,9 +293,8 @@ input[type="checkbox"]:checked ~ ul {
   .center{
     grid-area: center;
     text-align: center;
-    align-items: center;
-    
   }
+
   .center img{
     width: 5rem;
     border-radius: 15%;
@@ -303,6 +303,11 @@ input[type="checkbox"]:checked ~ ul {
   
   .right{
     grid-area: right;
+    text-align: center;
+  }
+  .right ul {
+    display: flex;
+    justify-content: center;
   }
     
   .footer-logo{
