@@ -9,17 +9,17 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #232526; /* fallback for old browsers */
+  background: #232526; 
   background: -webkit-linear-gradient(
     to right,
     #414345,
     #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #414345,
     #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 
 /* Estilos para la barra de navegacion */
@@ -74,7 +74,6 @@ nav ul li a:hover {
 
 .logo {
   margin-top: 1.5rem;
-  
   width: 12rem;
 }
 
@@ -95,6 +94,7 @@ nav label {
     background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
     background: linear-gradient(to right, #e7e9bb, #403b4a);
   }
+
   nav ul {
     display: none;
     position: absolute;
@@ -132,7 +132,6 @@ nav label {
   .location{
     display: none;
   }
-  
 
   nav a {
     display: block;
@@ -155,8 +154,6 @@ nav label {
     z-index: 1;
   }
 
-  
-
   /*barras del menú hamburguesa que ahora son visibles*/
   label i {
     display: block;
@@ -167,9 +164,9 @@ nav label {
     color: #ffffff;
   }
 }
-/* Estilos para pantallas medianas */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+/*media queries para pantallas medianas*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav{
     padding: 1rem 0; /* Ajusta el espaciado interior */
   }
@@ -179,14 +176,13 @@ nav label {
   .location{
     display: none;
   }
-
-  }
+}
   
 /* background principal*/
 .banner {
   position: relative;
   min-width: 90vw;
-  min-height: 100vh;
+  min-height: 100vh; 
   text-align: center;
   display: flex;
   align-items: center;
@@ -207,9 +203,10 @@ nav label {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #00000080;
+  background-color: rgba(0, 0, 0, 0.502);
 }
 .titulo {
+  margin-top: 2rem;
   color: #ffffff;
   font-size: 5rem;
   position: relative;
@@ -285,21 +282,37 @@ h4.titulo {
     opacity: 1;
   }
 }
-/* Media query para pantallas pequeñas */
+/*Media query para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
-  .banner {
-    min-height: 80vh; /* Cambiar la altura para pantallas pequeñas */
+  .banner{
+    background-image: url(../img/wepik-export-20230929230344jTe3-small.jpeg);
+    min-height: 65vh;
+   }
+  .banner::before {
+    opacity: 0.7;
   }
   .titulo {
-    font-size: 4.5rem;
-    position: relative;
+    font-size: 2.8rem; 
   }
-  h4.titulo {
-    margin-top: 2rem;
-    font-size: 3rem;
+  .banner h4 {
+    font-size: 1.5rem; 
+    margin-top:0.8rem;
+  }
+ }
+
+@media only screen and (min-width:600px) and (max-width:992px){
+  .banner{
+    background-image:url(../img/wepik-export-20230930030218Sk1-medium.jpeg);
+    min-height:75vh;
+  }
+  .titulo {
+    font-size: 3.5rem; 
+  }
+  .banner h4 {
+    font-size: 2rem; 
+    margin-top: 1rem;
   }
 }
-
 
 /*titulo principal*/
 .presentacion h1 {
@@ -308,6 +321,12 @@ h4.titulo {
   color: #ffd90092;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
+}
+
+@media only screen and (max-width:600px){
+  .presentacion h1{
+    font-size: 2.6rem;
+  }
 }
 
 /*Contenedor con la presentacion*/
@@ -484,8 +503,8 @@ Section.rooms h1 {
   display: none;
 }
 
-/* Media query para pantallas */
-@media only screen and (max-width: 600px) {
+/* Media query para pantallas pequeñas y medianas */
+@media only screen and (max-width: 992px) {
   #rooms {
     display: none;
   }
@@ -497,7 +516,11 @@ Section.rooms h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 360px; /* Cambia el tamaño máximo de la tarjeta según tus preferencias */
+    max-width: 21.875rem;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .card h1 {
     font-size: 2.5rem;
@@ -528,8 +551,7 @@ Section.rooms h1 {
     border: 1px solid #ffffff;
     width: 80%;
   }
-
-  .btnModal:hover {
+ .btnModal:hover {
     background-color: #ffffff;
     color: #000000;
   }
@@ -582,8 +604,8 @@ Section.servicios h1 {
   color: #ffd90092;
 }
 
-/* Media query para pantallas más pequeñas, como dispositivos móviles */
-@media only screen and (max-width: 600px) {
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
   .grid-services {
     grid-template-columns: 1fr; /* Cambia a una sola columna */
   }
@@ -642,19 +664,11 @@ Section.restaurant h1 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* .grid-rest{
-    display:flex;
-    flex-direction: column-reverse;
-   }
-   .grid-rest img{
-    width:100%;
-    
-   } */
   #restaurant {
     display: none;
   }
   .card-rest {
-    flex: 0 0 50%; /* Cambia el tamaño de flex a 50% para que ocupe la mitad del ancho disponible */
+    flex: 0 0 50%; 
     margin: 2rem auto;
     border: 1px solid #ffd90092;
     border-radius: 5px;
@@ -662,7 +676,10 @@ Section.restaurant h1 {
     flex-direction: column;
     text-align: center;
     max-width: 360px;
-    background-color: #403b4a4d;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .card-rest h1 {
     font-size: 2.5rem;
@@ -701,7 +718,25 @@ Section.restaurant h1 {
     color: #000000;
   }
 }
-
+/*media queries para dispositivos medianos*/
+@media only screen and (min-width:600px) and (max-width:992px){
+.grid-rest{
+   display: grid;
+   grid-template-columns: 1fr;
+  }
+  .rest2{
+    order:1;
+  }
+  .rest1{
+    display: flex;
+    justify-content: center;
+    order:2;
+  }
+  .rest1 img{
+    width:25rem;
+  }
+} 
+  
 /* Seccion eventos */
 .grid-event {
   display: grid;
@@ -753,15 +788,18 @@ Section.eventos h1 {
     display: none;
   }
   .card-event {
-    flex: 0 0 50%; /* Cambia el tamaño de flex a 50% para que ocupe la mitad del ancho disponible */
-    margin: 2rem auto; /* Auto para centrar horizontalmente y mantener el margen vertical */
+    flex: 0 0 50%; /* tamaño de flex a 50% para que ocupe la mitad del ancho disponible */
+    margin: 2rem auto; 
     border: 1px solid #ffd90092;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 360px; /* Cambia el tamaño máximo de la tarjeta según tus preferencias */
-    background-color: #403b4a4d;
+    max-width: 360px; 
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .card-event h1 {
     font-size: 2.5rem;
@@ -800,6 +838,19 @@ Section.eventos h1 {
     color: #000000;
   }
 }
+@media only screen and (min-width:600px) and (max-width:992px){
+  .grid-event{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+   .event2{
+    display: flex;
+    justify-content: center;
+  }
+  .event2 img{
+     width:25rem;
+   }
+}
 
 .grid-iframe {
   background: #000000;
@@ -834,20 +885,44 @@ h4 i {
 .locacion .fa-solid {
   color: rgba(255, 0, 0, 0.548);
 }
-
+/*media queries dispositivos pequeños*/
 @media only screen and (max-width: 600px) {
   .grid-iframe {
     display: flex;
     flex-direction: column;
-   
-  }
+    align-items: center;
+   }
+   .map {
+    width: 100%;
+    height: 200px;
+   }
+
   .locacion h2,
-  h4,
+  .locacion h4,
   i {
     display: none;
   }
  
 }
+/* Estilos para pantallas medianas */
+@media only screen  and (max-width: 992px) {
+  .grid-iframe {
+    grid-template-columns: 1fr;
+    width:80%;
+    }
+    .locacion h2,
+    .locacion h4,
+    i {
+      display: none;
+    }
+    .map {
+      width: 80%;
+    }
+    .iframe-container{
+      display: flex;
+      justify-content: center;
+    }
+  }
 
 /* contenedor con la info del hotel */
 .info-container {
@@ -907,7 +982,6 @@ h4 i {
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
 }
-
 .izq ul li i,
 .der ul li i {
   color: #ffd90092;
@@ -936,7 +1010,27 @@ h4 i {
     display: none;
   }
 }
-
+/*media queries para pantallas mediadas*/
+@media only screen and (min-width:600px) and (max-width:1024px){
+  .info-container {
+    grid-template: 1fr 2fr / 1fr 1fr; 
+    grid-template-areas:
+      "top top "
+      "izq der";
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+.izq,
+.der {
+  
+  align-items:center ;
+  text-align: start;
+}
+.medio {
+  display: none;
+}
+}
 /*contenedor del footer*/
 .foot-container {
   background: #403b4a;
@@ -1045,6 +1139,7 @@ h4 i {
     flex-direction: column;
     align-items: center;
     text-align: center;
+   
   }
   .left,
   .right {
@@ -1057,11 +1152,47 @@ h4 i {
     width: 10rem;
     margin-top: 0.5rem;
   }
-
   .center {
     display: none;
   }
   .line {
     margin-top: -1rem;
   }
+  .copyright{
+    text-align: center;
+  }
 }
+
+@media only screen and (min-width:600px) and (max-width:992px){
+  .foot-container {
+    grid-template: 4.25rem 15rem / 1fr 1fr;
+    grid-template-areas:
+      "up up"
+      "left right";
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    width: 10rem;
+    margin-top: 0.5rem;
+    margin-left: -6rem;
+  }
+  .up{
+    margin-top: 1rem;
+  }
+  .right {
+    margin-bottom: 1.5rem;
+  }
+  .center {
+    display: none;
+  }
+  .line {
+    margin-top: -1rem;
+  }
+  .copyright{
+    text-align: center;
+  }
+  
+
+}
+
