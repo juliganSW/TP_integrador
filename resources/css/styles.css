@@ -153,8 +153,7 @@ nav label {
     right: 1rem;
     z-index: 1;
   }
-
-  /*barras del menú hamburguesa que ahora son visibles*/
+ /*barras del menú hamburguesa que ahora son visibles*/
   label i {
     display: block;
     color: #ffd900;
@@ -1162,7 +1161,7 @@ h4 i {
     text-align: center;
   }
 }
-
+/*media queries para dispositivos medianos*/
 @media only screen and (min-width:600px) and (max-width:992px){
   .foot-container {
     grid-template: 4.25rem 15rem / 1fr 1fr;
@@ -1192,7 +1191,5 @@ h4 i {
   .copyright{
     text-align: center;
   }
-  
-
 }
 

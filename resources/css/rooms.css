@@ -61,7 +61,6 @@ nav ul li a:hover {
 
 .logo {
   margin-top: 1.5rem;
-  margin-left: -8rem;
   width: 12rem;
 }
 
@@ -135,13 +134,6 @@ nav label {
     z-index: 1;
   }
 
-  .logo {
-    margin-left: -15rem;
-  }
-
-  .fa-location-dot {
-    display: none;
-  }
   /*barras del menú hamburguesa que ahora son visibles*/
   label i {
     display: block;
@@ -150,6 +142,16 @@ nav label {
   label i:hover {
     color: #ffffff;
   }
+}
+/*media queries para pantallas medianas*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav{
+    padding: 1rem 0; /* Ajusta el espaciado interior */
+  }
+  nav ul li {
+    margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
+  }
+  
 }
 
 /*fuente para los titulos de las secciones*/
@@ -192,17 +194,32 @@ section h1 {
 
 /* seccion habitaciones */
 /* Estilos para las tarjetas */
-.cards {
-  display: flex; /*para poner las cards en linea*/
+.grid-rooms {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* Dos filas con la misma altura */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas con la misma anchura */
+  gap: 20px; /* Espacio entre los elementos */
+  width: 80%;
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+  justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */
+  align-content: center; /* Centra verticalmente el contenido dentro del contenedor */
 }
+  
+  
+ 
+  
+ 
+
+
 
 .card {
   flex: 50%;
-  margin: 2rem;
+  
   border: 1px solid #ffd90092;
   border-radius: 5px;
   display: flex;
   flex-direction: column; /*ubica el footer del card siempre por debajo*/
+  
   text-align: center;
   background: linear-gradient(
       to bottom,
@@ -335,19 +352,29 @@ section h1 {
     transform: scale(1, 1);
   }
 }
-.linea-medio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+
+
+/* Media query para dispositivos medianos */
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+  .grid-rooms {
+    grid-template-columns: repeat(2, auto); /* Cambia a dos columnas */
+  }
 }
-.linea-medio::before,
-.linea-medio::after {
-  content: "";
-  flex: 0.4;
-  border-top: 1px solid #000000;
-  margin: 0 0.625rem;
+
+/* Media query para dispositivos pequeños */
+@media only screen and (max-width: 768px) {
+  .grid-rooms {
+    grid-template-columns: repeat(1, auto); /* Cambia a una columna */
+  }
 }
+
+
+
+
+
+
+
+
 
 /*contenedor del footer*/
 .foot-container {
@@ -360,21 +387,20 @@ section h1 {
   grid-template-areas:
     "up up up"
     "left center right";
-  justify-content: start;
-  gap: 2.5rem;
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .up {
   grid-area: up;
-  text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
 
 .left {
   grid-area: left;
-  margin-left: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -393,22 +419,25 @@ section h1 {
   display: flex;
   justify-content: center;
 }
-
 .center {
   grid-area: center;
   text-align: center;
-  
 }
 .center img {
   width: 5rem;
   border-radius: 15%;
   margin-top: 0.5rem;
 }
+.list-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
 
 .footer-logo {
   width: 10rem;
   margin-top: 2rem;
-  margin-left: 5rem;
+ 
 }
 /*íconos de las redes sociales en el footer*/
 .fa-brands {
@@ -433,3 +462,75 @@ section h1 {
   justify-content: center;
   color: #ffffff;
 }
+/* Media query para pantallas más pequeñas*/
+@media only screen and (max-width: 600px) {
+  .foot-container {
+    grid-template: auto / 1fr;
+    grid-template-areas:
+      "up"
+      "left"
+      "right";
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .up {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+  }
+  .left,
+  .right {
+    text-align: center;
+  }
+  .right {
+    margin-bottom: 1.5rem;
+  }
+  .footer-logo {
+    width: 10rem;
+    margin-top: 0.5rem;
+  }
+  .center {
+    display: none;
+  }
+  .line {
+    margin-top: -1rem;
+  }
+  .copyright{
+    text-align: center;
+  }
+}
+/*media queries para dispositivos medianos*/
+@media only screen and (min-width:600px) and (max-width:992px){
+  .foot-container {
+    grid-template: 4.25rem 15rem / 1fr 1fr;
+    grid-template-areas:
+      "up up"
+      "left right";
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    width: 10rem;
+    margin-top: 0.5rem;
+    margin-left: -6rem;
+  }
+  .up{
+    margin-top: 1rem;
+  }
+  .right {
+    margin-bottom: 1.5rem;
+  }
+  .center {
+    display: none;
+  }
+  .line {
+    margin-top: -1rem;
+  }
+  .copyright{
+    text-align: center;
+  }
+  
+
+}
+
