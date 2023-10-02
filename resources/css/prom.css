@@ -65,7 +65,6 @@ nav ul li a:hover {
 
 .logo {
   margin-top: 1.5rem;
-  margin-left: -8rem;
   width: 12rem;
 }
 
@@ -121,10 +120,6 @@ nav ul li a:hover {
   background-color: transparent;
 }
 
-  .fa-solid.fa-location-dot {
-    display: none;
-  }
-
 nav a {
   display: block;
   font-size: 1.2rem;
@@ -145,30 +140,34 @@ nav label {
   right: 1rem;
   z-index: 1;
 }
-
-.logo {
-  margin-left: -15rem;
-  }
-
-
 /*barras del menú hamburguesa que ahora son visibles*/
 label i {
   display: block;
   color: #ffd900
 }
-
 label i:hover {
   color: white;
 }
 }
 
+/*media queries para pantallas medianas*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav{
+    padding: 1rem 0; /* Ajusta el espaciado interior */
+  }
+  nav ul li {
+    margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
+  }
+  .location{
+    display: none;
+  }
+}
 .banner {
   position: relative;
   min-width: 90vw;
   min-height: 60vh;
   font-family: "Montserrat", sans-serif;
 }
-
 .banner {
   text-align: center;
   display: flex;
@@ -290,51 +289,57 @@ h4.titulo {
 }
 
 /* seccion promociones */
-.grid-prom {
+.grid-prom{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.625rem;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  gap: 1.25rem; /* Espacio entre las columnas */
   width: 80%;
-  margin: 3rem auto;
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  margin: 2rem auto;  
+  box-shadow: 0 0 10px 0 #000000a3;
 }
-
-.celda-promo {
-  border: 2px solid rgba(139, 139, 0, 0.662);
-  box-shadow: 0 0 10px rgba(139, 139, 0, 0.662);
+.columna-izquierda {
   padding: 1.25rem;
 }
-
-.columna-derecha {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.625rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.columna-izquierda img {
+.columna-izquierda img{
   width: 28rem;
   border: 1px solid #ffd90092
 }
-
-.celda-contenedora {
-  display: flex;
-  gap: 2.5rem;
-  justify-content: start;
+.columna-derecha {
+  display: grid;
+  grid-template-rows: auto auto 3.5rem; /* Tres filas de igual altura en la columna derecha */
+  gap: 10px; /* Espacio entre las filas */
+  padding: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+.fila-contenedora,
+.fila-contenedora-1 {
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  text-align: center;
+ }
+.celda-promo {
+  border: 2px solid rgba(139, 139, 0, 0.662);
+  box-shadow: 0 0 10px rgba(139, 139, 0, 0.662);
+  padding: 1rem;
+ }
 
-/*botones reservar*/
-.btn {
+ /*botones reservar*/
+ .boton-centrado{
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
   background-color: transparent;
   color: #ffffff;
-  padding: 0.625rem 1.25rem;;
   text-decoration: none;
   border: 1px solid #ffffff;
-  width: 30%;
+  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
 }
 
 .btn:hover {
@@ -342,10 +347,31 @@ h4.titulo {
   color: #000000;
 }
 
-.boton-centrado {
-  display: flex;
-  justify-content: start;
-  margin-bottom: 1rem;
+
+/* Estilos para pantallas medianas (hasta 992px de ancho) */
+@media screen and (max-width: 1024px) {
+  .grid-prom {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+  }
+  .fila-contenedora,
+  .fila-contenedora-1 {
+    flex-direction: column; /* Cambia a una disposición de columna para los elementos flexibles */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  .celda-promo {
+    text-align: center; /* Centra el contenido de la celda */
+  }
+  .columna-izquierda img {
+    width: 100%; /* Restaura el tamaño original de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+}
+
+/* Estilos para pantallas pequeñas (hasta 480px de ancho) */
+@media screen and (max-width: 480px) {
+  .columna-izquierda img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  }
 }
 
 .back-to-top {
@@ -378,29 +404,33 @@ h4.titulo {
 /*contenedor del footer*/
 .foot-container {
   background: #403b4a;
-  background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a);
-  background: linear-gradient(to right,#e7e9bb,#403b4a);
+  background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+  background: linear-gradient(to right, #e7e9bb, #403b4a);
   width: 100%;
   display: grid;
   grid-template: 4.25rem 15rem / 0.8fr 0.8fr 0.8fr;
   grid-template-areas:
     "up up up"
     "left center right";
-  justify-content: start;
-  gap: 2.5rem;
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .up {
   grid-area: up;
-  text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
 
+.footer-logo {
+  width: 10rem;
+  margin-top: 1.2rem;
+}
+
 .left {
   grid-area: left;
-  margin-left: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -414,28 +444,30 @@ h4.titulo {
   grid-area: right;
   text-align: center;
 }
+
 .right ul {
   display: flex;
   justify-content: center;
 }
 
+.right ul li {
+  list-style: none;
+}
 
 .center {
   grid-area: center;
   text-align: center;
-
 }
 
+.list-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
 .center img {
   width: 5rem;
   border-radius: 15%;
   margin-top: 0.5rem;
-}
-
-.footer-logo {
-  width: 10rem;
-  margin-top: 2rem;
-  margin-left: 5rem;
 }
 
 /*íconos de las redes sociales en el footer*/
@@ -460,4 +492,74 @@ h4.titulo {
   margin: 0.5rem auto;
   justify-content: center;
   color: #ffffff;
+}
+
+/* Media query para pantallas más pequeñas*/
+@media only screen and (max-width: 600px) {
+  .foot-container {
+    grid-template: auto / 1fr;
+    grid-template-areas:
+      "up"
+      "left"
+      "right";
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .up {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+  }
+  .left,
+  .right {
+    text-align: center;
+  }
+  .right {
+    margin-bottom: 1.5rem;
+  }
+  .footer-logo {
+    width: 10rem;
+    margin-top: 0.5rem;
+  }
+  .center {
+    display: none;
+  }
+  .line {
+    margin-top: -1rem;
+  }
+  .copyright{
+    text-align: center;
+  }
+}
+/*media queries para dispositivos medianos*/
+@media only screen and (min-width:600px) and (max-width:992px){
+  .foot-container {
+    grid-template: 4.25rem 15rem / 1fr 1fr;
+    grid-template-areas:
+      "up up"
+      "left right";
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    width: 10rem;
+    margin-top: 0.5rem;
+    margin-left: -6rem;
+  }
+  .up{
+    margin-top: 1rem;
+  }
+  .right {
+    margin-bottom: 1.5rem;
+  }
+  .center {
+    display: none;
+  }
+  .line {
+    margin-top: -1rem;
+  }
+  .copyright{
+    text-align: center;
+  }
 }

@@ -369,6 +369,7 @@ Section.rooms h1 {
   width: 80%; /* Ancho del contenedor del grid */
   margin: 3rem auto;
   color: #ffd90092;
+  
 }
 
 .arriba {
@@ -515,10 +516,10 @@ Section.rooms h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 21.875rem;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-width: 22.5rem;
+    background: #232526;  
+    background: -webkit-linear-gradient(to bottom, #414345, #232526); 
+    background: linear-gradient(to bottom, #414345, #232526); 
 
   }
   .card h1 {
@@ -571,17 +572,20 @@ Section.servicios h1 {
   gap: 1.25rem;
   width: 80%;
   margin: 3rem auto; /* Centrar el contenedor */
+  
+ 
 }
 
 .grid-item1 article {
-  background: #636363;
+  /* background: #636363;
   background: -webkit-linear-gradient(to right, #a2ab58, #636363);
-  background: linear-gradient(to right, #a2ab58, #636363);
-  color: #000000;
+  background: linear-gradient(to right, #a2ab58, #636363); */
+  color:rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   padding: 1.25rem;
   /* border: 1px solid #000000; */
-  box-shadow: 0 0 10px 0 #000000a3;
+  /* box-shadow: 0 0 10px 0 #000000a3; */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .grid-item2 {
   display: flex;
@@ -593,7 +597,7 @@ Section.servicios h1 {
 .grid-item2 ul li {
   color: #ffffff;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 2px #ffdf0080; /* Dorado suave */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .grid-item2 ul li {
   list-style: none;
@@ -622,6 +626,7 @@ Section.servicios h1 {
   padding: 1.25rem;
   align-items: center; /*centra verticalmente*/
   margin: 3rem auto; /* Centrar el contenedor */
+  
 }
 
 Section.restaurant h1 {
@@ -649,14 +654,15 @@ Section.restaurant h1 {
 
 .rest2 article {
   margin-top: 1rem;
-  background: #636363; /* fallback for old browsers */
+  /* background: #636363; 
   background: -webkit-linear-gradient(to right, #a2ab58, #636363);
-  background: linear-gradient(to right, #a2ab58, #636363);
-  color: #000000;
+  background: linear-gradient(to right, #a2ab58, #636363); */
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   padding: 1.25rem;
   /* border: 1px solid #000000; */
-  box-shadow: 0 0 10px 0 #000000a3;
+  /* box-shadow: 0 0 10px 0 #000000a3; */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .card-rest{
   display: none;
@@ -666,7 +672,8 @@ Section.restaurant h1 {
   #restaurant {
     display: none;
   }
-  .card-rest {
+  
+ .card-rest {
     flex: 0 0 50%; 
     margin: 2rem auto;
     border: 1px solid #ffd90092;
@@ -674,12 +681,12 @@ Section.restaurant h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 360px;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-width: 22.5rem;
+    background: #232526;  
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  
+    background: linear-gradient(to bottom, #414345, #232526); 
 
-  }
+  }  
   .card-rest h1 {
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -769,14 +776,15 @@ Section.eventos h1 {
 
 .event1 article {
   margin-top: 1rem;
-  background: #636363;
+  /* background: #636363;
   background: -webkit-linear-gradient(to right, #a2ab58, #636363);
-  background: linear-gradient(to right, #a2ab58, #636363);
-  color: #000000;
+  background: linear-gradient(to right, #a2ab58, #636363); */
+  color:rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   padding: 1.25rem;
   /* border: 1px solid #000000; */
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64);
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.64); */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .card-event{
   display: none;
@@ -786,20 +794,21 @@ Section.eventos h1 {
   #eventos {
     display: none;
   }
+  
   .card-event {
-    flex: 0 0 50%; /* tamaño de flex a 50% para que ocupe la mitad del ancho disponible */
+    flex: 0 0 50%; 
     margin: 2rem auto; 
     border: 1px solid #ffd90092;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 360px; 
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-width: 22.5rem; 
+    background: #232526;  
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  
+    background: linear-gradient(to bottom, #414345, #232526); 
 
-  }
+  } 
   .card-event h1 {
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -979,7 +988,7 @@ h4 i {
   list-style: none;
   margin-top: 0.5rem;
   color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(255, 223, 0, 0.5); /* Dorado suave */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .izq ul li i,
 .der ul li i {
