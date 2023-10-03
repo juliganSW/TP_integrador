@@ -104,9 +104,7 @@ nav label {
     margin: 0;
     text-align: center;
   }
-  .fa-solid.fa-location-dot{
-    display: none;
-  }
+  
   nav a {
     display: block;
     font-size: 1.2rem;
@@ -157,10 +155,7 @@ input[type="checkbox"]:checked ~ ul {
   nav ul li {
     margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
   }
-  
-  }
-
-  
+}
 
 .texto-fijo {
   position: relative;
@@ -204,7 +199,7 @@ h4.titulo {
   -moz-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-  animation: fadeIn 3s; /* Aplicar la animación a la imagen de fondo */
+  animation: fadeIn 3s; /* Aplica la animación a la imagen de fondo */
 }
 
 @keyframes fadeIn {
@@ -213,6 +208,63 @@ h4.titulo {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ 
+/*Media query para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .titulo {
+    font-size: 2.8rem; 
+  }
+  .banner h4 {
+    font-size: 1.5rem; 
+    margin-top:0.8rem;
+  }
+ }
+
+@media only screen and (min-width:600px) and (max-width:992px){
+  .titulo {
+    font-size: 3.5rem; 
+  }
+  .banner h4 {
+    font-size: 2rem; 
+    margin-top: 1rem;
   }
 }
 section.anuncio{
@@ -238,9 +290,13 @@ section.anuncio h1{
 
 
 .booking {
-  background: #3c3b3f; 
-  background: -webkit-linear-gradient(to right, #605c3c,#3c3b3f); 
-  background: linear-gradient(to right,#605c3c,#3c3b3f); 
+  background: rgba(99, 99, 99, 0.5);
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(161, 171, 88, 0.5),
+    rgba(99, 99, 99, 0.5)
+  );
+  background: linear-gradient(to right, rgba(161, 171, 88, 0.5), rgba(99, 99, 99, 0.5));
   width: 25rem;
   padding: 5px;
   border: 1px solid #a1ab5891;
@@ -281,12 +337,6 @@ select.form-select{
   margin: 0 10px; 
 }
 
-.advert {
-  background: #000000;
-  background: -webkit-linear-gradient(to bottom,#434343,#000000); 
-  background: linear-gradient(to bottom,#434343,#000000
-  ); 
-}
 .advert img {
   width: 18rem;
   margin-top: 1rem;
@@ -312,7 +362,7 @@ select.form-select{
   align-items: center; 
   text-align: center;
   font-size: 0.875rem; 
-  margin-top: 1.2rem;
+ 
   opacity: 85%;
   cursor: pointer;
 }
@@ -326,7 +376,8 @@ select.form-select{
   align-items: center; /* Centra verticalmente el contenido */
   text-align: center;
   font-size: 1rem; 
-  margin-top: 1.2rem;
+ 
+  
   opacity: 85%;
   cursor: pointer;
 }
@@ -344,7 +395,7 @@ select.form-select{
   color: #000000;
 }
 @media only screen and (max-width:768px){
-  .advert{
+  .advert img {
     display: none;
   }
  }

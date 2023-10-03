@@ -158,9 +158,7 @@ label i:hover {
   nav ul li {
     margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
   }
-  .location{
-    display: none;
-  }
+ 
 }
 .banner {
   position: relative;
@@ -206,24 +204,7 @@ label i:hover {
     opacity: 1;
   }
 }
-
-.texto-fijo {
-  position: relative;
-  z-index: 2;
-}
-
-.titulo {
-  color: white;
-  font-size: 3.5rem;
-  position: relative;
-}
-
-h4.titulo {
-  margin-top: 2rem;
-  color: #ffffff;
-  font-size: 2.5rem;
-}
-/* @-moz-keyframes fadeIn {
+@-moz-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -257,8 +238,52 @@ h4.titulo {
   100% {
     opacity: 1;
   }
-}  */
+}  
 
+
+.texto-fijo {
+  position: relative;
+  z-index: 2;
+}
+
+.titulo {
+  color: white;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+h4.titulo {
+  margin-top: 2rem;
+  color: #ffffff;
+  font-size: 2.5rem;
+}/*Media query para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  
+  .titulo {
+    font-size: 2.8rem; 
+  }
+  .banner h4 {
+    font-size: 1.5rem; 
+    margin-top:0.8rem;
+  }
+ }
+
+@media only screen and (min-width:600px) and (max-width:992px){
+ 
+  .titulo {
+    font-size: 3.5rem; 
+  }
+  .banner h4 {
+    font-size: 2rem; 
+    margin-top: 1rem;
+  }
+}
+ 
+ 
+ 
+
+
+ 
 /* seccion promociones */
 .promociones h1 {
   margin-top: 1.5rem;
@@ -306,7 +331,7 @@ h4.titulo {
 }
 .columna-derecha {
   display: grid;
-  grid-template-rows: auto auto 3.5rem; /* Tres filas de igual altura en la columna derecha */
+  grid-template-rows: auto auto 3.5rem; 
   gap: 10px; /* Espacio entre las filas */
   padding: 20px;
   color: #ffffff;
@@ -355,22 +380,21 @@ h4.titulo {
   }
   .fila-contenedora,
   .fila-contenedora-1 {
-    flex-direction: column; /* Cambia a una disposición de columna para los elementos flexibles */
-    align-items: center; /* Centra los elementos horizontalmente */
+    flex-direction: column; 
   }
   .celda-promo {
-    text-align: center; /* Centra el contenido de la celda */
+    text-align: center; 
   }
   .columna-izquierda img {
-    width: 100%; /* Restaura el tamaño original de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 100%; 
+    margin: 0 auto; 
   }
 }
 
 /* Estilos para pantallas pequeñas (hasta 480px de ancho) */
 @media screen and (max-width: 480px) {
   .columna-izquierda img {
-    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    width: 100%; 
   }
 }
 
