@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #232526;
-  background: -webkit-linear-gradient(to right,#414345,#232526);
-  background: linear-gradient(to right,#414345,#232526);
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 /* Estilos para la barra de navegacion */
@@ -32,8 +32,8 @@ nav {
   align-items: center;
   padding: 0 1.25rem;
   background: #403b4a;
-  background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a);
-  background: linear-gradient(to right,#e7e9bb,#403b4a);
+  background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+  background: linear-gradient(to right, #e7e9bb, #403b4a);
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5);
@@ -79,91 +79,90 @@ nav label {
 }
 
 /*queries para pantallas pequeñas*/
-@media only screen and (max-width:768px) {
-nav {
-  background: #403b4a;
-  background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-  background: linear-gradient(to right, #e7e9bb, #403b4a);
-}
-
-nav ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #403b4a;
-  background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a);
-  background: linear-gradient(to right, #e7e9bb, #403b4a);
-  padding: 1rem;
-  box-shadow: 0 0.125rem 0.313rem #00000033;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-}
-
-nav li {
-  line-height: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid #333;
-  margin: 0;
-  text-align: center;
-}
-
- nav li:hover {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.547);
-}
-
-nav ul li a:hover {
-  color: #000000;
-  background-color: transparent;
-}
-
-nav a {
-  display: block;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
+@media only screen and (max-width: 768px) {
+  nav {
+    background: #403b4a;
+    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+    background: linear-gradient(to right, #e7e9bb, #403b4a);
   }
 
-input[type="checkbox"]:checked~ul {
-  display: flex;
-  flex-direction: column;
-}
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #403b4a;
+    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+    background: linear-gradient(to right, #e7e9bb, #403b4a);
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.313rem #00000033;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+  }
 
-nav label {
-  display: block;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1;
-}
-/*barras del menú hamburguesa que ahora son visibles*/
-label i {
-  display: block;
-  color: #ffd900
-}
-label i:hover {
-  color: white;
-}
+  nav li {
+    line-height: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #333;
+    margin: 0;
+    text-align: center;
+  }
+
+  nav li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.547);
+  }
+
+  nav ul li a:hover {
+    color: #000000;
+    background-color: transparent;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
+  /*barras del menú hamburguesa que ahora son visibles*/
+  label i {
+    display: block;
+    color: #ffd900;
+  }
+  label i:hover {
+    color: white;
+  }
 }
 
 /*media queries para pantallas medianas*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav{
+  nav {
     padding: 1rem 0; /* Ajusta el espaciado interior */
   }
   nav ul li {
     margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
   }
- 
 }
 .banner {
   position: relative;
   min-width: 90vw;
-  min-height: 60vh;
+  min-height: 63vh;
   font-family: "Montserrat", sans-serif;
 }
 .banner {
@@ -180,7 +179,8 @@ label i:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vista-lujoso-espacio-interior-hotel\ \(1\).jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/vista-lujoso-espacio-interior-hotel\ _2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -238,8 +238,7 @@ label i:hover {
   100% {
     opacity: 1;
   }
-}  
-
+}
 
 .texto-fijo {
   position: relative;
@@ -256,41 +255,36 @@ h4.titulo {
   margin-top: 2rem;
   color: #ffffff;
   font-size: 2.5rem;
-}/*Media query para pantallas pequeñas */
-@media only screen and (max-width: 600px) {
-  
-  .titulo {
-    font-size: 2.8rem; 
-  }
-  .banner h4 {
-    font-size: 1.5rem; 
-    margin-top:0.8rem;
-  }
- }
+}
 
-@media only screen and (min-width:600px) and (max-width:992px){
- 
+/*Media query para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
   .titulo {
-    font-size: 3.5rem; 
+    font-size: 2.8rem;
   }
   .banner h4 {
-    font-size: 2rem; 
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+  }
+}
+/*media queries para dispositivos medianos*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .titulo {
+    font-size: 3.5rem;
+  }
+  .banner h4 {
+    font-size: 2rem;
     margin-top: 1rem;
   }
 }
- 
- 
- 
 
-
- 
 /* seccion promociones */
 .promociones h1 {
   margin-top: 1.5rem;
   font-size: 2.8rem;
   color: #ffd90092;
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 /*Contenedor con la presentacion*/
@@ -314,24 +308,24 @@ h4.titulo {
 }
 
 /* seccion promociones */
-.grid-prom{
+.grid-prom {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
   gap: 1.25rem; /* Espacio entre las columnas */
   width: 80%;
-  margin: 2rem auto;  
+  margin: 2rem auto;
   box-shadow: 0 0 10px 0 #000000a3;
 }
 .columna-izquierda {
   padding: 1.25rem;
 }
-.columna-izquierda img{
+.columna-izquierda img {
   width: 28rem;
-  border: 1px solid #ffd90092
+  border: 1px solid #ffd90092;
 }
 .columna-derecha {
   display: grid;
-  grid-template-rows: auto auto 3.5rem; 
+  grid-template-rows: auto auto 3.5rem;
   gap: 10px; /* Espacio entre las filas */
   padding: 20px;
   color: #ffffff;
@@ -341,18 +335,18 @@ h4.titulo {
 .fila-contenedora,
 .fila-contenedora-1 {
   display: flex;
-  gap:2rem;
+  gap: 2rem;
   justify-content: center;
   text-align: center;
- }
+}
 .celda-promo {
   border: 2px solid rgba(139, 139, 0, 0.662);
   box-shadow: 0 0 10px rgba(139, 139, 0, 0.662);
   padding: 1rem;
- }
+}
 
- /*botones reservar*/
- .boton-centrado{
+/*botones reservar*/
+.boton-centrado {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -372,7 +366,6 @@ h4.titulo {
   color: #000000;
 }
 
-
 /* Estilos para pantallas medianas (hasta 992px de ancho) */
 @media screen and (max-width: 1024px) {
   .grid-prom {
@@ -380,21 +373,21 @@ h4.titulo {
   }
   .fila-contenedora,
   .fila-contenedora-1 {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .celda-promo {
-    text-align: center; 
+    text-align: center;
   }
   .columna-izquierda img {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
 /* Estilos para pantallas pequeñas (hasta 480px de ancho) */
 @media screen and (max-width: 480px) {
   .columna-izquierda img {
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -533,7 +526,6 @@ h4.titulo {
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
   }
   .left,
   .right {
@@ -552,12 +544,12 @@ h4.titulo {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
 }
 /*media queries para dispositivos medianos*/
-@media only screen and (min-width:600px) and (max-width:992px){
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .foot-container {
     grid-template: 4.25rem 15rem / 1fr 1fr;
     grid-template-areas:
@@ -571,7 +563,7 @@ h4.titulo {
     margin-top: 0.5rem;
     margin-left: -6rem;
   }
-  .up{
+  .up {
     margin-top: 1rem;
   }
   .right {
@@ -583,7 +575,7 @@ h4.titulo {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
 }

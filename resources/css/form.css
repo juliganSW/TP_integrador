@@ -1,15 +1,14 @@
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 body {
-  font-family: 'Roboto', sans-serif; 
-  background: #232526; 
-  background: -webkit-linear-gradient(to right,#414345,#232526); 
-  background: linear-gradient(to right,#414345,#232526
-  ); 
+  font-family: "Roboto", sans-serif;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 /* Estilos para la barra de navegacion */
@@ -28,9 +27,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background: #403b4a; 
-  background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a); 
-  background: linear-gradient(to right,#e7e9bb,#403b4a); 
+  background: #403b4a;
+  background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+  background: linear-gradient(to right, #e7e9bb, #403b4a);
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.6);
@@ -42,7 +41,7 @@ nav ul {
   padding: 6.25rem;
 }
 nav ul li {
- margin: 0 1.563rem;
+  margin: 0 1.563rem;
 }
 
 nav ul li a {
@@ -71,12 +70,12 @@ nav label {
 }
 
 /*queries para pantallas pequeñas*/
-@media only screen and (max-width:768px) {
-  nav{
+@media only screen and (max-width: 768px) {
+  nav {
     background: #403b4a;
-    background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a); 
-    background: linear-gradient(to right,#e7e9bb,#403b4a); 
-}
+    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+    background: linear-gradient(to right, #e7e9bb, #403b4a);
+  }
   nav ul {
     display: none;
     position: absolute;
@@ -84,35 +83,29 @@ nav label {
     left: 0;
     width: 100%;
     background: #403b4a;
-    background: -webkit-linear-gradient(to right,#e7e9bb,#403b4a
-   ); 
-    background: linear-gradient(
-    to right,
-    #e7e9bb,
-    #403b4a
-  ); 
+    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+    background: linear-gradient(to right, #e7e9bb, #403b4a);
     padding: 1rem;
     box-shadow: 0 0.125rem 0.313rem #00000033;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 1001;
-}
+  }
 
   nav li {
     line-height: 1.875rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid #333;
     margin: 0;
     text-align: center;
   }
-  
+
   nav a {
     display: block;
     font-size: 1.2rem;
     padding: 0.5rem 0;
   }
- 
- 
-input[type="checkbox"]:checked ~ ul {
+
+  input[type="checkbox"]:checked ~ ul {
     display: flex;
     flex-direction: column;
   }
@@ -126,11 +119,10 @@ input[type="checkbox"]:checked ~ ul {
     right: 1rem;
     z-index: 1;
   }
-  nav li:hover{
+  nav li:hover {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.547) ;
-
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.547);
   }
   nav ul li a:hover {
     color: #000000;
@@ -138,18 +130,17 @@ input[type="checkbox"]:checked ~ ul {
   }
 
   /*barras del menú hamburguesa que ahora son visibles*/
-  label i{
+  label i {
     display: block;
-    color:#ffd900
+    color: #ffd900;
   }
-  label i:hover{
+  label i:hover {
     color: white;
   }
- 
 }
 /*media queries para pantallas medianas*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav{
+  nav {
     padding: 1rem 0; /* Ajusta el espaciado interior */
   }
   nav ul li {
@@ -191,7 +182,8 @@ h4.titulo {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/vista-lujoso-pasillo-hotel\ \(1\).jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/vista-lujoso-pasillo-hotel\ _2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -246,48 +238,47 @@ h4.titulo {
     opacity: 1;
   }
 }
- 
+
 /*Media query para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
   .titulo {
-    font-size: 2.8rem; 
+    font-size: 2.8rem;
   }
   .banner h4 {
-    font-size: 1.5rem; 
-    margin-top:0.8rem;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
   }
- }
+}
 
-@media only screen and (min-width:600px) and (max-width:992px){
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .titulo {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
   }
   .banner h4 {
-    font-size: 2rem; 
+    font-size: 2rem;
     margin-top: 1rem;
   }
 }
-section.anuncio{
+section.anuncio {
   margin-top: 2.5rem;
   text-align: center;
 }
-section.anuncio h1{
-  color:white;
+section.anuncio h1 {
+  color: white;
   font-size: 2rem;
   text-transform: uppercase;
 }
-.check{
-  padding:20px;
-  background: #000000; 
-  background: -webkit-linear-gradient(to bottom,#434343,#000000); 
-  background: linear-gradient(to bottom,#434343,#000000); 
+.check {
+  padding: 20px;
+  background: #000000;
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);
+  background: linear-gradient(to bottom, #434343, #000000);
 }
-.container .check i{
-  color:white;
+.container .check i {
+  color: white;
   display: inline-block;
   margin-right: 10px;
 }
-
 
 .booking {
   background: rgba(99, 99, 99, 0.5);
@@ -296,7 +287,11 @@ section.anuncio h1{
     rgba(161, 171, 88, 0.5),
     rgba(99, 99, 99, 0.5)
   );
-  background: linear-gradient(to right, rgba(161, 171, 88, 0.5), rgba(99, 99, 99, 0.5));
+  background: linear-gradient(
+    to right,
+    rgba(161, 171, 88, 0.5),
+    rgba(99, 99, 99, 0.5)
+  );
   width: 25rem;
   padding: 5px;
   border: 1px solid #a1ab5891;
@@ -307,14 +302,14 @@ section.anuncio h1{
 label {
   font-weight: bold;
 }
-input[type]{
+input[type] {
   background-color: rgba(245, 245, 245, 0.788);
-  border-color:#ffd90092;
+  border-color: #ffd90092;
 }
 
-select.form-select{
+select.form-select {
   background-color: rgba(245, 245, 245, 0.788);
-  border-color:#ffd90092;
+  border-color: #ffd90092;
 }
 
 .payments {
@@ -333,8 +328,8 @@ select.form-select{
 .linea-medio::after {
   content: "";
   flex: 0.5;
-  border-top: 1px solid white; 
-  margin: 0 10px; 
+  border-top: 1px solid white;
+  margin: 0 10px;
 }
 
 .advert img {
@@ -355,14 +350,14 @@ select.form-select{
     #b5aee4 100%
   );
   width: 14.375rem;
-  height:14.375rem;
+  height: 14.375rem;
   border-radius: 50%; /* Esto crea el círculo */
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 0.875rem; 
- 
+  font-size: 0.875rem;
+
   opacity: 85%;
   cursor: pointer;
 }
@@ -375,18 +370,19 @@ select.form-select{
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
   text-align: center;
-  font-size: 1rem; 
- 
-  
+  font-size: 1rem;
   opacity: 85%;
   cursor: pointer;
 }
+
 /* Efecto opaco para los circulos */
-.advert.circle, .advert.circle-2 {
+.advert.circle,
+.advert.circle-2 {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
-.circle:hover, .circle-2:hover {
+.circle:hover,
+.circle-2:hover {
   opacity: 0.5;
 }
 
@@ -394,12 +390,11 @@ select.form-select{
   text-decoration: line-through;
   color: #000000;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width: 768px) {
   .advert img {
     display: none;
   }
- }
- 
+}
 
 /*contenedor del footer*/
 .foot-container {
@@ -423,7 +418,7 @@ select.form-select{
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
-.up h1{
+.up h1 {
   font-weight: bold;
 }
 
@@ -495,7 +490,7 @@ select.form-select{
 /*final del footer*/
 .copyright {
   display: flex;
-  margin:0.5rem auto;
+  margin: 0.5rem auto;
   justify-content: center;
   color: #ffffff;
 }
@@ -515,7 +510,6 @@ select.form-select{
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
   }
   .left,
   .right {
@@ -534,12 +528,12 @@ select.form-select{
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
 }
 /*media queries para dispositivos medianos*/
-@media only screen and (min-width:600px) and (max-width:992px){
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .foot-container {
     grid-template: 4.25rem 15rem / 1fr 1fr;
     grid-template-areas:
@@ -553,7 +547,7 @@ select.form-select{
     margin-top: 0.5rem;
     margin-left: -6rem;
   }
-  .up{
+  .up {
     margin-top: 1rem;
   }
   .right {
@@ -565,10 +559,7 @@ select.form-select{
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
 }
-
-
-

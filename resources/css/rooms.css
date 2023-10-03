@@ -145,13 +145,12 @@ nav label {
 }
 /*media queries para pantallas medianas*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav{
+  nav {
     padding: 1rem 0; /* Ajusta el espaciado interior */
   }
   nav ul li {
     margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
   }
-  
 }
 
 /*fuente para los titulos de las secciones*/
@@ -196,34 +195,27 @@ section h1 {
 /* Estilos para las tarjetas */
 .grid-rooms {
   display: grid;
-  grid-template-rows: repeat(2, 1fr); /* Dos filas con la misma altura */
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas con la misma anchura */
-  gap: 20px; /* Espacio entre los elementos */
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   width: 80%;
-  margin: 0 auto; /* Centra horizontalmente el contenedor */
-  justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */
-  align-content: center; /* Centra verticalmente el contenido dentro del contenedor */
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
 }
-  
-  
- 
-  
- 
-
-
 
 .card {
   flex: 50%;
-  
+
   border: 1px solid #ffd90092;
   border-radius: 5px;
   display: flex;
   flex-direction: column; /*ubica el footer del card siempre por debajo*/
-  
+
   text-align: center;
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526;
+  background: -webkit-linear-gradient(to bottom, #414345, #232526);
+  background: linear-gradient(to bottom, #414345, #232526);
   background-blend-mode: multiply, multiply;
 }
 
@@ -345,9 +337,8 @@ section h1 {
   }
 }
 
-
 /* Media query para dispositivos medianos */
-@media only screen and (min-width: 768px) and (max-width:1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .grid-rooms {
     grid-template-columns: repeat(2, auto); /* Cambia a dos columnas */
   }
@@ -359,14 +350,6 @@ section h1 {
     grid-template-columns: repeat(1, auto); /* Cambia a una columna */
   }
 }
-
-
-
-
-
-
-
-
 
 /*contenedor del footer*/
 .foot-container {
@@ -429,7 +412,6 @@ section h1 {
 .footer-logo {
   width: 10rem;
   margin-top: 2rem;
- 
 }
 /*íconos de las redes sociales en el footer*/
 .fa-brands {
@@ -469,7 +451,6 @@ section h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
   }
   .left,
   .right {
@@ -488,12 +469,12 @@ section h1 {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
 }
 /*media queries para dispositivos medianos*/
-@media only screen and (min-width:600px) and (max-width:992px){
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .foot-container {
     grid-template: 4.25rem 15rem / 1fr 1fr;
     grid-template-areas:
@@ -507,7 +488,7 @@ section h1 {
     margin-top: 0.5rem;
     margin-left: -6rem;
   }
-  .up{
+  .up {
     margin-top: 1rem;
   }
   .right {
@@ -519,10 +500,7 @@ section h1 {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
     text-align: center;
   }
-  
-
 }
-

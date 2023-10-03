@@ -9,17 +9,9 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #232526; 
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); 
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); 
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 /* Estilos para la barra de navegacion */
@@ -31,21 +23,21 @@ header {
 
 nav {
   top: 0;
-  position:fixed;
+  position: fixed;
   display: flex;
   width: 100%;
   height: 5rem;
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background-color: rgba(255, 255, 255, 0.302); 
+  background-color: rgba(255, 255, 255, 0.302);
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0px 0px 10px #00000080;
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
   transition: top 0.5s ease;
 }
-
+/*cambia de color la barra de navegacion cuando se hace scroll*/
 nav.scroll-down {
   background: #403b4a;
   background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
@@ -71,7 +63,6 @@ nav ul li a:hover {
   background-color: #ffd90092;
   border-radius: 5px;
 }
-
 .logo {
   margin-top: 1.5rem;
   width: 12rem;
@@ -129,7 +120,7 @@ nav label {
     background-color: transparent;
   }
 
-  .location{
+  .location {
     display: none;
   }
 
@@ -153,7 +144,7 @@ nav label {
     right: 1rem;
     z-index: 1;
   }
- /*barras del menú hamburguesa que ahora son visibles*/
+  /*barras del menú hamburguesa que ahora son visibles*/
   label i {
     display: block;
     color: #ffd900;
@@ -165,22 +156,22 @@ nav label {
 
 /*media queries para pantallas medianas*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav{
+  nav {
     padding: 1rem 0; /* Ajusta el espaciado interior */
   }
   nav ul li {
     margin: 0.5rem 0.8rem; /* Ajusta el espaciado entre elementos de la lista */
   }
-  .location{
+  .location {
     display: none;
   }
 }
-  
+
 /* background principal*/
 .banner {
   position: relative;
   min-width: 90vw;
-  min-height: 100vh; 
+  min-height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -224,7 +215,7 @@ h4.titulo {
   content: "";
   flex: 0.5;
   border-top: 1px solid #ffffff;
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .fade-in-text {
@@ -281,32 +272,32 @@ h4.titulo {
 }
 /*Media query para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
-  .banner{
+  .banner {
     background-image: url(../img/wepik-export-20230929230344jTe3-small.jpeg);
     min-height: 65vh;
-   }
+  }
   .banner::before {
     opacity: 0.7;
   }
   .titulo {
-    font-size: 2.8rem; 
+    font-size: 2.8rem;
   }
   .banner h4 {
-    font-size: 1.5rem; 
-    margin-top:0.8rem;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
   }
- }
+}
 
-@media only screen and (min-width:600px) and (max-width:992px){
-  .banner{
-    background-image:url(../img/wepik-export-20230930030218Sk1-medium.jpeg);
-    min-height:75vh;
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .banner {
+    background-image: url(../img/wepik-export-20230930030218Sk1-medium.jpeg);
+    min-height: 75vh;
   }
   .titulo {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
   }
   .banner h4 {
-    font-size: 2rem; 
+    font-size: 2rem;
     margin-top: 1rem;
   }
 }
@@ -320,8 +311,8 @@ h4.titulo {
   font-family: "Cormorant Garamond", serif;
 }
 
-@media only screen and (max-width:600px){
-  .presentacion h1{
+@media only screen and (max-width: 600px) {
+  .presentacion h1 {
     font-size: 2.6rem;
   }
 }
@@ -341,7 +332,11 @@ h4.titulo {
     rgba(161, 171, 88, 0.7),
     rgba(99, 99, 99, 0.7)
   );
-  background: linear-gradient(to right, rgba(161, 171, 88, 0.7), rgba(99, 99, 99, 0.7));
+  background: linear-gradient(
+    to right,
+    rgba(161, 171, 88, 0.7),
+    rgba(99, 99, 99, 0.7)
+  );
   padding: 1.25rem;
   font-size: 1.2rem;
   color: #000000;
@@ -497,14 +492,14 @@ Section.rooms h1 {
 /*fin del carrusel */
 
 /*la clase card está oculta en dispositivos grandes*/
-.card{
+.card {
   display: none;
 }
 
 /* Media query para pantallas pequeñas y medianas */
 @media only screen and (max-width: 992px) {
   #rooms {
-    display: none;/* se quita el carrusel y se cambia por una card*/
+    display: none; /* se quita el carrusel y se cambia por una card*/
   }
   .card {
     flex: 0 0 50%; /* Cambia el tamaño de flex a 50% para que ocupe la mitad del ancho disponible */
@@ -515,11 +510,11 @@ Section.rooms h1 {
     flex-direction: column;
     text-align: center;
     max-width: 22.5rem;
-    background: #232526;  
-    background: -webkit-linear-gradient(to bottom, #414345, #232526); 
-    background: linear-gradient(to bottom, #414345, #232526); 
-
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    background: linear-gradient(to bottom, #414345, #232526);
   }
+
   .card h1 {
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -549,7 +544,8 @@ Section.rooms h1 {
     border: 1px solid #ffffff;
     width: 80%;
   }
- .btnModal:hover {
+
+  .btnModal:hover {
     background-color: #ffffff;
     color: #000000;
   }
@@ -564,6 +560,7 @@ Section.rooms h1 {
   align-items: center;
   margin: 3rem auto; /* Centrar el contenedor */
 }
+
 Section.servicios h1 {
   color: #ffd90092;
   font-size: 2.5rem;
@@ -573,17 +570,17 @@ Section.servicios h1 {
 }
 
 .grid-item1 article {
-  color:rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   padding: 1.25rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
- .grid-item2 {
-  display:flex;
+.grid-item2 {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} 
+}
 
 .grid-item2 ul li {
   color: #ffffff;
@@ -615,9 +612,8 @@ Section.servicios h1 {
   width: 80%;
   gap: 1.25rem;
   padding: 1.25rem;
-  align-items: center; 
-  margin: 3rem auto; 
-  
+  align-items: center;
+  margin: 3rem auto;
 }
 
 Section.restaurant h1 {
@@ -650,7 +646,7 @@ Section.restaurant h1 {
   padding: 1.25rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-.card-rest{
+.card-rest {
   display: none;
 }
 
@@ -658,9 +654,9 @@ Section.restaurant h1 {
   #restaurant {
     display: none;
   }
-  
- .card-rest {
-    flex: 0 0 50%; 
+
+  .card-rest {
+    flex: 0 0 50%;
     margin: 2rem auto;
     border: 1px solid #ffd90092;
     border-radius: 5px;
@@ -668,11 +664,11 @@ Section.restaurant h1 {
     flex-direction: column;
     text-align: center;
     max-width: 22.5rem;
-    background: #232526;  
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  
-    background: linear-gradient(to bottom, #414345, #232526); 
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    background: linear-gradient(to bottom, #414345, #232526);
+  }
 
-  }  
   .card-rest h1 {
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -711,24 +707,24 @@ Section.restaurant h1 {
   }
 }
 /*media queries para dispositivos medianos*/
-@media only screen and (min-width:600px) and (max-width:992px){
-.grid-rest{
-   display: grid;
-   grid-template-columns: 1fr;
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .grid-rest {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  .rest2{
-    order:1;
+  .rest2 {
+    order: 1;
   }
-  .rest1{
+  .rest1 {
     display: flex;
     justify-content: center;
-    order:2;
+    order: 2;
   }
-  .rest1 img{
-    width:25rem;
+  .rest1 img {
+    width: 25rem;
   }
-} 
-  
+}
+
 /* Seccion eventos */
 .grid-event {
   display: grid;
@@ -762,12 +758,12 @@ Section.eventos h1 {
 
 .event1 article {
   margin-top: 1rem;
-  color:rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   padding: 1.25rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-.card-event{
+.card-event {
   display: none;
 }
 
@@ -775,21 +771,20 @@ Section.eventos h1 {
   #eventos {
     display: none;
   }
-  
+
   .card-event {
-    flex: 0 0 50%; 
-    margin: 2rem auto; 
+    flex: 0 0 50%;
+    margin: 2rem auto;
     border: 1px solid #ffd90092;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 22.5rem; 
-    background: #232526;  
-    background: -webkit-linear-gradient(to bottom, #414345, #232526);  
-    background: linear-gradient(to bottom, #414345, #232526); 
-
-  } 
+    max-width: 22.5rem;
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    background: linear-gradient(to bottom, #414345, #232526);
+  }
   .card-event h1 {
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -827,18 +822,19 @@ Section.eventos h1 {
     color: #000000;
   }
 }
-@media only screen and (min-width:600px) and (max-width:992px){
-  .grid-event{
+/*media queries dispositivos medianos*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .grid-event {
     display: grid;
     grid-template-columns: 1fr;
   }
-   .event2{
+  .event2 {
     display: flex;
     justify-content: center;
   }
-  .event2 img{
-     width:25rem;
-   }
+  .event2 img {
+    width: 25rem;
+  }
 }
 
 .grid-iframe {
@@ -850,9 +846,8 @@ Section.eventos h1 {
   grid-template-columns: 1fr 1fr;
   margin: 0 auto; /* Centrar el contenedor */
   align-items: center;
-  
 }
-.iframe-container{
+.iframe-container {
   margin: 2rem;
 }
 
@@ -875,44 +870,45 @@ h4 i {
 .locacion .fa-solid {
   color: rgba(255, 0, 0, 0.548);
 }
+
 /*media queries dispositivos pequeños*/
 @media only screen and (max-width: 600px) {
   .grid-iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-   }
-   .map {
+  }
+  .map {
     width: 100%;
     height: 200px;
-   }
+  }
 
   .locacion h2,
   .locacion h4,
   i {
     display: none;
   }
- 
 }
+
 /* Estilos para pantallas medianas */
-@media only screen  and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .grid-iframe {
     grid-template-columns: 1fr;
-    width:80%;
-    }
-    .locacion h2,
-    .locacion h4,
-    i {
-      display: none;
-    }
-    .map {
-      width: 100%;
-    }
-    .iframe-container{
-      display: flex;
-      justify-content: center;
-    }
+    width: 80%;
   }
+  .locacion h2,
+  .locacion h4,
+  i {
+    display: none;
+  }
+  .map {
+    width: 100%;
+  }
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /* contenedor con la info del hotel */
 .info-container {
@@ -950,9 +946,8 @@ h4 i {
 .medio {
   grid-area: medio;
   text-align: center;
- 
 }
-.medio h4{
+.medio h4 {
   font-size: 1.2rem;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -970,6 +965,7 @@ h4 i {
   text-align: start;
   font-size: 1.2rem;
 }
+
 .izq ul li,
 .der ul li {
   list-style: none;
@@ -977,6 +973,7 @@ h4 i {
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
 .izq ul li i,
 .der ul li i {
   color: #ffd90092;
@@ -1005,27 +1002,28 @@ h4 i {
     display: none;
   }
 }
+
 /*media queries para pantallas mediadas*/
-@media only screen and (min-width:600px) and (max-width:1024px){
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   .info-container {
-    grid-template: 1fr 2fr / 1fr 1fr; 
+    grid-template: 1fr 2fr / 1fr 1fr;
     grid-template-areas:
       "top top "
       "izq der";
     gap: 1rem;
     padding: 1rem;
     width: 100%;
+  }
+  .izq,
+  .der {
+    align-items: center;
+    text-align: start;
+  }
+  .medio {
+    display: none;
+  }
 }
-.izq,
-.der {
-  
-  align-items:center ;
-  text-align: start;
-}
-.medio {
-  display: none;
-}
-}
+
 /*contenedor del footer*/
 .foot-container {
   background: #403b4a;
@@ -1114,13 +1112,18 @@ h4 i {
 /*final del footer*/
 .copyright {
   display: flex;
-  margin: 0.5rem auto;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
- 
+  margin: 0.5rem auto;
+  gap: 20px;
 }
-
+.item {
+  color: white;
+  text-align: center;
+}
+.copyright img {
+  width: 4rem;
+}
 
 /* Media query para pantallas más pequeñas*/
 @media only screen and (max-width: 600px) {
@@ -1156,12 +1159,16 @@ h4 i {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
+    flex-direction: column;
     text-align: center;
+  }
+  .copyright img {
+    margin-top: -1rem;
   }
 }
 /*media queries para dispositivos medianos*/
-@media only screen and (min-width:600px) and (max-width:992px){
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .foot-container {
     grid-template: 4.25rem 15rem / 1fr 1fr;
     grid-template-areas:
@@ -1175,7 +1182,7 @@ h4 i {
     margin-top: 0.5rem;
     margin-left: -6rem;
   }
-  .up{
+  .up {
     margin-top: 1rem;
   }
   .right {
@@ -1187,8 +1194,11 @@ h4 i {
   .line {
     margin-top: -1rem;
   }
-  .copyright{
+  .copyright {
+    flex-direction: column;
     text-align: center;
   }
+  .copyright img {
+    margin-top: -1rem;
+  }
 }
-
