@@ -80,12 +80,6 @@ nav label {
 
 /*queries para pantallas pequeñas*/
 @media only screen and (max-width: 768px) {
-  nav {
-    background: #403b4a;
-    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-    background: linear-gradient(to right, #e7e9bb, #403b4a);
-  }
-
   nav ul {
     display: none;
     position: absolute;
@@ -311,7 +305,7 @@ h4.titulo {
 .grid-prom {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-  gap: 1.25rem; /* Espacio entre las columnas */
+  gap: 1rem; /* Espacio entre las columnas */
   width: 80%;
   margin: 2rem auto;
   box-shadow: 0 0 10px 0 #000000a3;

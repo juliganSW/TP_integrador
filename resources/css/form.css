@@ -71,11 +71,7 @@ nav label {
 
 /*queries para pantallas pequeñas*/
 @media only screen and (max-width: 768px) {
-  nav {
-    background: #403b4a;
-    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-    background: linear-gradient(to right, #e7e9bb, #403b4a);
-  }
+ 
   nav ul {
     display: none;
     position: absolute;
@@ -294,7 +290,7 @@ section.anuncio h1 {
   );
   width: 25rem;
   padding: 5px;
-  border: 1px solid #a1ab5891;
+ 
   color: #ffffffc9;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }

@@ -76,13 +76,7 @@ nav label {
 
 /*queries para pantallas pequeñas*/
 @media only screen and (max-width: 768px) {
-  nav {
-    background: #403b4a;
-    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-    background: linear-gradient(to right, #e7e9bb, #403b4a);
-  }
-
-  nav ul {
+ nav ul {
     display: none;
     position: absolute;
     top: 100%;
@@ -206,12 +200,10 @@ section h1 {
 
 .card {
   flex: 50%;
-
   border: 1px solid #ffd90092;
   border-radius: 5px;
   display: flex;
   flex-direction: column; /*ubica el footer del card siempre por debajo*/
-
   text-align: center;
   background: #232526;
   background: -webkit-linear-gradient(to bottom, #414345, #232526);
@@ -229,9 +221,14 @@ section h1 {
 .card .content img {
   width: 20rem;
 }
+.card-text{
+  margin-top: 0.5rem;
+  color:rgba(255, 255, 255, 0.877);
+  text-align: start;
+}
 
 .card .footer {
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .back-to-top {
@@ -261,10 +258,6 @@ section h1 {
   color: #000000;
 }
 
-.footer {
-  margin-top: 1rem;
-}
-
 .btnModal {
   margin-top: 1rem;
   background-color: transparent;
@@ -272,69 +265,13 @@ section h1 {
   padding: 0.625rem 1.25rem;
   text-decoration: none;
   border: 1px solid #ffffff;
+  border-radius: 5px;
   width: 40%;
 }
 
 .btnModal:hover {
   background-color: #ffffff;
   color: #000000;
-}
-
-.contModal {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000000b3;
-  /* z-index: 1000; */
-}
-
-.contModal .modal {
-  position: relative;
-  width: 46%;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 5px #ccc;
-  color: #000000;
-  border-radius: 10px;
-  padding: 2%;
-  animation: animModal 1s ease;
-}
-.contModal .modal h2 {
-  color: rgb(140, 105, 15);
-  font-size: 1.5rem;
-}
-
-.contModal .modal .closeModal {
-  color: rgb(140, 105, 15);
-  font-size: 1.5rem;
-  font-weight: bold;
-  position: absolute;
-  right: 0.625rem;
-  top: 0.625rem;
-  cursor: pointer;
-}
-.contModal .modal .closeModal:hover {
-  color: #989898;
-}
-
-.contModal .modal .contenidoModal {
-  font-size: 1rem;
-  margin-top: 0.938rem;
-}
-
-@keyframes animModal {
-  0% {
-    opacity: 0.3;
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
 }
 
 /* Media query para dispositivos medianos */

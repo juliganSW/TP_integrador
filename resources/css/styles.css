@@ -30,19 +30,14 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 1.25rem;
-  background-color: rgba(255, 255, 255, 0.302);
+  background: #403b4a;
+    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
+    background: linear-gradient(to right, #e7e9bb, #403b4a);
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0px 0px 10px #00000080;
   z-index: 1000; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
-  transition: top 0.5s ease;
-}
-/*cambia de color la barra de navegacion cuando se hace scroll*/
-nav.scroll-down {
-  background: #403b4a;
-  background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-  background: linear-gradient(to right, #e7e9bb, #403b4a);
-  box-shadow: 0.625rem 0.313rem 0.313rem #00000080;
+ 
 }
 
 nav ul {
@@ -80,12 +75,7 @@ nav label {
 
 /*queries para pantallas pequeñas*/
 @media only screen and (max-width: 768px) {
-  nav {
-    background: #403b4a;
-    background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a);
-    background: linear-gradient(to right, #e7e9bb, #403b4a);
-  }
-
+ 
   nav ul {
     display: none;
     position: absolute;
@@ -482,11 +472,7 @@ Section.rooms h1 {
 #slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
 #slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
 #slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
-#slide-4:checked
-  ~ .control-4
-  ~ .slide-indicador
-  li:nth-child(4)
-  .slide-circulo {
+#slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo {
   color: #428bca;
 }
 /*fin del carrusel */
